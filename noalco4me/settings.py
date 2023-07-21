@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['non-alco-4me-427be0bd27b2.herokuapp.com', '8000-karroroenni-nonalcoholi-ak9fqj8cuwe.ws-eu101.gitpod.io']
+ALLOWED_HOSTS = ['non-alco-4me-427be0bd27b2.herokuapp.com', '8000-karroroenni-nonalcoholi-ak9fqj8cuwe.ws-eu102.gitpod.io']
 
 
 # Application definition
@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'django_summernote',
     'noalco4me',
     'recipes',
+    'test',
 ]
 
 MIDDLEWARE = [

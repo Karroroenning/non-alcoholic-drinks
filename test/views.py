@@ -19,5 +19,5 @@ from django.views.generic import (
 from django.http.response import HttpResponse
 
 
-def all_recipes(request):
-    return render(request, 'recipes/recipes.html')
+def test_page_view(request):
+    return render(request, 'test/test.html')
