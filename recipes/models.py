@@ -5,6 +5,7 @@ from django.contrib.auth import get_user_model
 
 STATUS = ((0, "Draft"), (1, "Published"))
 
+
 class Recipes(models.Model):
     """
     Recipes model 
@@ -18,8 +19,8 @@ class Recipes(models.Model):
     status = models.IntegerField(choices=STATUS, default=1)
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
-    likes = models.ManyToManyField(User, related_name='blog_likes', blank=True)
-
+    likes = models.ManyToManyField(
+        User, related_name='recipes_likes', blank=True)
 
     class Meta:
         ordering = ['-created_on']
