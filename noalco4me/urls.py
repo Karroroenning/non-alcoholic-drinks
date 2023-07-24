@@ -21,6 +21,7 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('test/', include('test.urls'), name='test-urls'),
-    path('', include('recipes.urls'), name='recipes-urls'),
+    path('', include('home.urls'), name='home-urls'),
+    path('recipes/', include('recipes.urls'), name='recipes-urls'),
     path('summernote/', include('django_summernote.urls')),
 ]

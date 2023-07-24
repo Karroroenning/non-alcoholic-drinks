@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'cloudinary',
     'django_summernote',
     'noalco4me',
+    'home',
     'recipes',
     'test',
 ]
