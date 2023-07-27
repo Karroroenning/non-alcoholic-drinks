@@ -36,19 +36,16 @@ class Recipes(models.Model):
 
 
 class Comment(models.Model):
-    """
-    Model for comments from users
-    """
-    author = models.ForeignKey(User, on_delete=models.CASCADE)
     recipes_posts = models.ForeignKey(
-        Recipes, on_delete=models.CASCADE, related_name='comments')
-    content = models.TextField(max_length=300)
+        Recipes, on_delete=models.CASCADE, related_name="comments")
+    name = models.CharField(max_length=80)
+    email = models.EmailField()
+    body = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     approved = models.BooleanField(default=False)
 
     class Meta:
-        ordering = ['created_on']
+        ordering = ["created_on"]
 
     def __str__(self):
-        return 'comment on {} by {}'.format(self.recipes_posts.title,
-                                            self.author.username)
+        return f"Comment {self.body} by {self.name}"
