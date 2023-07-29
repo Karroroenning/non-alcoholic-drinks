@@ -1,29 +1,30 @@
 from django.db import models
+
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
-from django.contrib.auth import get_user_model
+
 
 STATUS = ((0, "Draft"), (1, "Published"))
 
 
 class Recipes(models.Model):
-    """
-    Recipes model 
-    """
+
     title = models.CharField(max_length=200, unique=True)
-    slug = models.SlugField(max_length=200, null=True, unique=True, blank=True)
-    creator = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name="recipes_posts")
-    body = models.TextField()
-    recipes_image = CloudinaryField('image', default='placeholder')
-    status = models.IntegerField(choices=STATUS, default=1)
-    created_on = models.DateTimeField(auto_now_add=True)
+    slug = models.SlugField(max_length=200, unique=True)
+    author = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="recipes"
+    )
+    featured_image = CloudinaryField('image', default='placeholder')
+    excerpt = models.TextField(blank=True)
     updated_on = models.DateTimeField(auto_now=True)
+    content = models.TextField()
+    created_on = models.DateTimeField(auto_now_add=True)
+    status = models.IntegerField(choices=STATUS, default=0)
     likes = models.ManyToManyField(
-        User, related_name='recipes_likes', blank=True)
+        User, related_name='recipes_like', blank=True)
 
     class Meta:
-        ordering = ['-created_on']
+        ordering = ["-created_on"]
 
     def __str__(self):
         return self.title
@@ -36,19 +37,17 @@ class Recipes(models.Model):
 
 
 class Comment(models.Model):
-    """
-    Model for comments from users
-    """
-    author = models.ForeignKey(User, on_delete=models.CASCADE)
-    recipes_posts = models.ForeignKey(
-        Recipes, on_delete=models.CASCADE, related_name='comments')
-    content = models.TextField(max_length=300)
+
+    recipes = models.ForeignKey(Recipes, on_delete=models.CASCADE,
+                             related_name="comments")
+    name = models.CharField(max_length=80)
+    email = models.EmailField(default='')
+    body = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     approved = models.BooleanField(default=False)
 
     class Meta:
-        ordering = ['created_on']
+        ordering = ["created_on"]
 
     def __str__(self):
-        return 'comment on {} by {}'.format(self.recipes_posts.title,
-                                            self.author.username)
+        return f"Comment {self.body} by {self.name}"

@@ -1,5 +1,4 @@
-{% extends 'base.html' %} 
-{% block content %}
+{% extends 'base.html' %} {% block content %}
 
 <div class="masthead">
     <div class="container">
@@ -15,7 +14,7 @@
                 {% if "placeholder" in recipes.featured_image.url %}
                 <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" width="100%">
                 {% else %}
-                <img src=" {{ recipes.featured_image.url }}" width="100%">
+                <img src=" {{ post.featured_image.url }}" width="100%">
                 {% endif %}
             </div>
         </div>
