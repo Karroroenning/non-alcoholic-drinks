@@ -15,7 +15,7 @@
                 {% if "placeholder" in recipes.featured_image.url %}
                 <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" width="100%">
                 {% else %}
-                <img src=" {{ post.featured_image.url }}" width="100%">
+                <img src=" {{ recipes.featured_image.url }}" width="100%">
                 {% endif %}
             </div>
         </div>
@@ -34,8 +34,21 @@
                 <div class="row">
 
                     <div class="col-1">
+                        <strong>
+                            {% if user.is_authenticated %}
+                            <form class="d-inline" action="{% url 'recipes_like' recipes.slug %}" method="POST">
+                                {% csrf_token %}
+                                {% if liked %}
+                                <button type="submit" name="recipespost_id" value="{{recipes.slug}}" class="btn-like"><i class="fas fa-heart"></i></button>
+                                {% else %}
+                                <button type="submit" name="recipes_id" value="{{recipes.slug}}" class="btn-like"><i class="far fa-heart"></i></button>
+                                {% endif %}
+                            </form>
+                            {% else %}
+                            <span class="text-secondary"><i class="far fa-heart"></i></span>
+                            {% endif %}
                         <!-- The number of likes goes before the closing strong tag -->
-                        <strong class="text-secondary"><i class="far fa-heart"></i> {{ recipes.number_of_likes }} </strong>
+                        <strong class="text-secondary"> {{ recipes.number_of_likes }} </strong>
                     </div>
                     <div class="col-1">
                         {% with comments.count as total_comments %}
