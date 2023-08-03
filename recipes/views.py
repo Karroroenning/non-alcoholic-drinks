@@ -1,9 +1,10 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
-from django.http import HttpResponseRedirect
+from django.http import HttpResponse, HttpResponseRedirect
+from django.contrib.auth.decorators import login_required
 
 from .models import Recipes
-from .forms import CommentForm
+from .forms import CommentForm, RecipesForm
 
 
 class RecipesList(generic.ListView):
@@ -77,4 +78,26 @@ class RecipesLike(View):
             recipes.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('recipes-detail', args=[slug]))
-        
+
+
+@login_required()
+def add_recipes(request):
+    """renders add recipes form"""
+    submitted = False
+    if request.method == "POST":
+        recipes_form = RecipesForm(request.POST, request.FILES)
+        if recipes_form.is_valid():
+            recipes_form.instance.creator = request.user
+            recipes_form.save()
+            messages.success(
+                request,
+                'Success! Your recipes has been submitted for approval.')
+            return redirect('home-urls')
+    else:
+        recipes_form = RecipesForm
+        if 'submitted' in request.GET:
+            submitted = True
+    return render(
+        request,
+        'add_recipes.html',
+        {'recipes_form': recipes_form, 'submitted': submitted})

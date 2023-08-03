@@ -23,6 +23,10 @@ class Recipes(models.Model):
     likes = models.ManyToManyField(
         User, related_name='recipes_like', blank=True)
 
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.title)
+        super(Review, self).save(*args, **kwargs)
+        
     class Meta:
         ordering = ["-created_on"]
 
@@ -34,6 +38,20 @@ class Recipes(models.Model):
 
     def number_of_comments(self):
         return self.comments.count()
+
+    def can_edit(self, request, slug):
+        """Allows creator to edit review."""
+        if self.creator:
+            return True
+        else:
+            return False
+
+    def can_delete(self, request, slug):
+        """Allows creator to delete review."""
+        if self.creator:
+            return True
+        else:
+            return False
 
 
 class Comment(models.Model):

@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load cloudinary %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block title %}
+    <title>Create your recipes here</title>
+{% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+    <div class="card-body">
+        <h4 class="text-center">Create your recipes here</h4>
+        {% if submitted %}
+                    <div class="alert alert-success" role="alert">
+                        Your recipes is awaiting approval
+                    </div>
+        {% else %}
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="row">
+                    {{ recipes_form | crispy }}
+                </div>
+                <br>
+                <input type="submit" value="submit" class="btn btn-secondary">
+            </form>
+        {% endif %}
+   </div>
+{% else %}
+<div class="container">
+    <div class="row">
+        <div class="col mt-3 mb-5 text-dark text-center">
+            <h1 class="mb-5">You are not authorised to view this page</h1>
+            <p>Please <a href="{% url 'account_login' %}">log in</a> or <a href="{% url 'account_signup' %}">register</a> an account.</p>
+        </div>
+    </div>
+</div>
+{% endif %}
+{% endblock %}
