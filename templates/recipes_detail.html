@@ -23,6 +23,39 @@
     </div>
 </div>
 
+{% if request.user.id == recipes.author.id %}
+<!-- Edit Button, Delete Button and Delete Modal  -->
+<div id="modifyRecipes">
+    <div class="col mt-2 mb-3 text-center">
+        <!--Edit Button-->
+        <a href="{% url 'edit_recipes' recipes.slug %}" class="edit"><button class="btn btn-success btn-md"
+                value="{{ recipes.slug }}" type="button">Edit</button></a>
+        <!--Delete Button-->
+        <button class="btn btn-danger btn-md mx4" data-bs-toggle="modal"
+        data-bs-target="#deleteModal{{ recipes.id }}">Delete</button>
+    </div>        
+    <!--Modal-->
+    <div class="modal fade" id="deleteModal{{ recipes.id }}" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content delete-modal">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteModalLabel">Delete</h5>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Are you sure you want to delete "{{ recipes.title }}"?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <a class="btn btn-danger" href="{% url 'delete_recipes' recipes.slug %}">Delete</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
 <div class="container">
     <div class="row">
         <div class="col card mb-4  mt-3 left  top">

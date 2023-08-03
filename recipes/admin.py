@@ -10,9 +10,14 @@ class Noalco4mePostAdmin(SummernoteModelAdmin):
 
     prepopulated_fields = {'slug': ('title',)}
     list_filter = ('status', 'created_on')
-    list_display = ('title', 'slug', 'status', 'created_on')
+    list_display = ('title', 'status', 'created_on', 'approved')
     summernote_fields = ('content',)
     search_fields = ['title', 'content']
+    actions = ['approve_recipes']
+
+    def approve_recipes(self, request, queryset):
+        queryset.update(approved=True)
+
 
 
 @admin.register(Comment)

@@ -1,6 +1,7 @@
 
 {% extends 'base.html' %}
 {% load static %}
+{% load crispy_forms_tags %}
 {% block content %}
 <section>
     <div class="container-fluid px-4 px-lg-5">
@@ -10,7 +11,13 @@
         <hr>
     </div>
 </section>
-
+{% if user.is_authenticated %}
+        {% if submitted in add_recipes %}
+                    <div class="alert alert-success" role="alert">
+                        Your recipes is awaiting approval
+                    </div>
+        {% endif %}
+        {% endif %}
 
 <div class="container-fluid">
     <div class="row">
@@ -29,9 +36,9 @@
                                 {% else %}
                                 <img class="card-img-top" src=" {{ recipes.featured_image.url }}">
                                 {% endif %}
-                                <!-- <div class="image-flash">
-                                    <p class="author">Author: {{ Recipes.author }}</p>
-                                </div> -->
+                                <div class="image-flash">
+                                    <p class="author">Creator: {{ recipes.author }}</p>
+                                </div>
                             </div>
                             <a href="{% url 'recipes-detail' recipes.slug %}" class="recipes-link">
                                 <h2 class="card-title">{{ recipes.title }}</h2>
@@ -52,6 +59,8 @@
             </div>
         </div>
     </div>
+
+    
     <!-- {% if is_paginated %}
     <nav aria-label="Page navigation">
         <ul class="pagination justify-content-center">

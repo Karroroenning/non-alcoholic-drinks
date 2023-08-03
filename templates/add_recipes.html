@@ -11,11 +11,6 @@
 {% if user.is_authenticated %}
     <div class="card-body">
         <h4 class="text-center">Create your recipes here</h4>
-        {% if submitted %}
-                    <div class="alert alert-success" role="alert">
-                        Your recipes is awaiting approval
-                    </div>
-        {% else %}
             <form method="POST" enctype="multipart/form-data">
                 {% csrf_token %}
                 <div class="row">
@@ -24,7 +19,6 @@
                 <br>
                 <input type="submit" value="submit" class="btn btn-secondary">
             </form>
-        {% endif %}
    </div>
 {% else %}
 <div class="container">

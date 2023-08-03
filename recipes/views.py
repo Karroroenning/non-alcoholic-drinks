@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from django.http import HttpResponse, HttpResponseRedirect
+from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
 from .models import Recipes
@@ -89,9 +90,6 @@ def add_recipes(request):
         if recipes_form.is_valid():
             recipes_form.instance.creator = request.user
             recipes_form.save()
-            messages.success(
-                request,
-                'Success! Your recipes has been submitted for approval.')
             return redirect('home-urls')
     else:
         recipes_form = RecipesForm
@@ -101,3 +99,34 @@ def add_recipes(request):
         request,
         'add_recipes.html',
         {'recipes_form': recipes_form, 'submitted': submitted})
+
+
+@login_required()
+def edit_recipes(request, slug):
+    """Recipes update/edit view"""
+    recipes = get_object_or_404(Recipes, slug=slug)
+    recipes_form = RecipesForm(request.POST or None, instance=recipes)
+    context = {
+        "recipes_form": recipes_form,
+        "recipes": recipes
+    }
+    if request.method == "POST":
+        recipes_form = RecipeswForm(request.POST, request.FILES, instance=recipes)
+        if recipes_form.is_valid():
+            recipes = recipes_form.save(commit=False)
+            recipes.creator = request.user
+            recipes.save()
+            messages.success(request, 'Your edited recipes has been updated.')
+            return redirect('home-urls')
+    else:
+        recipes_form = RecipesForm(instance=recipes)
+    return render(request, "edit_recipes.html", context)
+
+
+@login_required()
+def delete_recipes(request, slug):
+    """Delete recipes"""
+    recipes = get_object_or_404(Recipes, slug=slug)
+    recipes.delete()
+    messages.success(request, 'Your recipes has been deleted.')
+    return redirect('home-urls')
