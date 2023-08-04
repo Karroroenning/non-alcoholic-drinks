@@ -1,10 +1,7 @@
-from . import views
 from django.urls import path
-
-# Internal:
-from .views import (contact)
+from . import views
 
 
 urlpatterns = [
-   path('', contact, name='contact-urls'),
+    path('contact/', views.Contact.as_view(), name='contact-urls'),
 ]
