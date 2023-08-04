@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+{% load crispy_forms_tags %}
+
+
+<!-- Contact form -->
+<section id="contact">
+    <div class="mt-3">
+        <h3 class="text-center">Contact Us</h3>
+    </div>
+    <hr>
+    <div class="container-fluid my-4">
+        <div class="row">
+            <div class="col-sm-6 ">
+                <form method="POST">
+                   <!-- {% csrf_token %}{{ contact_form | crispy }} -->
+                    <br>
+                    <button class="btn btn-dark" type="submit">Send</button>
+                </form>
+            </div>
+            <div class="col-sm-6">
+                <img src="https://res.cloudinary.com/dh6umdpzt/image/upload/v1685091103/contact_jweg1i.jpg"
+                    class="contact-image" alt="contact-image" style="width:100%">
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}

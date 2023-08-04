@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'noalco4me',
     'home',
     'recipes',
+    'contact',
 ]
 
 SITE_ID = 1
