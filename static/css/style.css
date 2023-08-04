@@ -140,3 +140,7 @@ body {
     background: transparent;
     border: none;
 }
+
+div#map {
+    min-height: 360px;
+}
