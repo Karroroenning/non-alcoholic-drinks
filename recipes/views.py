@@ -12,7 +12,7 @@ class RecipesList(generic.ListView):
     model = Recipes
     queryset = Recipes.objects.filter(status=1).order_by('-created_on')
     template_name = 'recipes.html'
-    paginate_by = 6
+    paginate_by = 9
 
 
 class RecipesDetail(View):
@@ -90,7 +90,8 @@ def add_recipes(request):
         if recipes_form.is_valid():
             recipes_form.instance.creator = request.user
             recipes_form.save()
-            return redirect('home-urls')
+            messages.success(request, 'Your recipes has been deleted.')
+            return redirect('recipes-urls')
     else:
         recipes_form = RecipesForm
         if 'submitted' in request.GET:
@@ -99,6 +100,7 @@ def add_recipes(request):
         request,
         'add_recipes.html',
         {'recipes_form': recipes_form, 'submitted': submitted})
+
 
 
 @login_required()
@@ -111,13 +113,13 @@ def edit_recipes(request, slug):
         "recipes": recipes
     }
     if request.method == "POST":
-        recipes_form = RecipeswForm(request.POST, request.FILES, instance=recipes)
+        recipes_form = RecipesForm(request.POST, request.FILES, instance=recipes)
         if recipes_form.is_valid():
             recipes = recipes_form.save(commit=False)
             recipes.creator = request.user
             recipes.save()
-            messages.success(request, 'Your edited recipes has been updated.')
-            return redirect('home-urls')
+            messages.success(request, 'Your recipes has been deleted.')
+            return redirect('recipes-urls')
     else:
         recipes_form = RecipesForm(instance=recipes)
     return render(request, "edit_recipes.html", context)
@@ -129,4 +131,4 @@ def delete_recipes(request, slug):
     recipes = get_object_or_404(Recipes, slug=slug)
     recipes.delete()
     messages.success(request, 'Your recipes has been deleted.')
-    return redirect('home-urls')
+    return redirect('recipes-urls')

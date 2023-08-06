@@ -30,10 +30,10 @@
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarText">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <div class="collapse navbar-collapse justify-content-end" id="navbarText">
+                <ul class="navbar-nav mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{% url 'home-urls' %}">Home</a>
+                        <a class="nav-link" aria-current="page" href="{% url 'home-urls' %}">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'recipes-urls' %}">Recipes</a>
@@ -54,9 +54,6 @@
                     </li>
                     {% endif %}
                 </ul>
-                <span class="navbar-text text-muted">
-                    Fresh sodadrinks
-                </span>
             </div>
         </div>
     </nav>
@@ -69,11 +66,49 @@
 
     <!-- Footer -->
     <footer class="footer mt-auto py-3 dark-bg">
-        <p class="m-0 text-center text-white">Footer</p>
-        <p class="m-0 text-center text-white">Follow us: <i class="fab fa-facebook-square ms-3"></i>
-            <i class="fab fa-twitter-square ms-3"></i>
-            <i class="fab fa-instagram-square ms-3"></i>
-            <i class="fab fa-youtube-square ms-3"></i></p>
+        <footer class="text-center text-white">
+            <div class="container p-2 pb-0">
+                <div class="row">
+                    <!-- Section: Address and Email -->
+                    <section class="col-lg-4">
+                        <h4>Our Address <i class="fa-regular fa-address-card"></i></h4>
+                        <p>NonAlco4me<br>
+                            JacobsohnStraße, Weißensee<br>
+                            Berlin
+                            <br>Germany- 13086
+                        </p>
+                        <h4>Our Email <i class="fa-regular fa-envelope"></i></h4>
+                        <p>
+                            Nonalco4me@mail.com
+                        </p>
+                        <br>
+        
+                    </section>
+                    <!-- Section: Social media -->
+                    <section class="col mb-4">
+                        <h4 class="my-4">Social Media</h4>
+                        <a class="btn btn-outline-light btn-floating m-1" href="https://www.twitter.com" target="_blank"
+                            role="button"><i class="fab fa-twitter"></i> Twitter</a>
+        
+                        <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/" target="_blank"
+                            role="button"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+        
+                        <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/" target="_blank"
+                            role="button"><i class="fab fa-instagram"></i> Instagram</a>
+        
+                        <a class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com/" target="_blank"
+                            role="button"><i class="fab fa-facebook"></i> Facebook</a>
+                        <hr class="my-4">
+                </div>
+        
+            </div>
+        
+            <!-- Copyright -->
+            <div class="text-center" id="copyright">
+                © 2023 Copyright:
+                <a class="text-white" href="{% url 'home-urls' %}">Humanitas | Educational Purpose Only</a>
+            </div>
+        </footer>
     </footer>
 
     <!-- Boostrap 5 JS and Poppers-->

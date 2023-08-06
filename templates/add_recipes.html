@@ -3,14 +3,23 @@
 {% load crispy_forms_tags %}
 {% load static %}
 
+{% if user.is_authenticated %}
+{% if submitted in add_recipes %}
+            <div class="alert alert-success" role="alert">
+                Your recipes is awaiting approval
+            </div>
+{% endif %}
+{% endif %}
+
 {% block title %}
     <title>Create your recipes here</title>
 {% endblock %}
 
 {% block content %}
 {% if user.is_authenticated %}
-    <div class="card-body">
+    <div class="container card-body">
         <h4 class="text-center">Create your recipes here</h4>
+        <hr>
             <form method="POST" enctype="multipart/form-data">
                 {% csrf_token %}
                 <div class="row">

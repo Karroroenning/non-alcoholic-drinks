@@ -10,25 +10,38 @@
         <hr>
     </div>
 </section>
-
-<div id="hero-image" class="container-fluid hero-container">
+<div id="hero-image" class="img-fluid">
     <div class="col-12" id="hero-text-container">
-        <div class="text-center text-black header-text">
-             {% if user.is_authenticated %}
-             <p>Your first destination for peer book reviews. Click the button below to browse existing reviews, or submit your own.</p>
-             {% else %}
-             <p>Your first destination for peer book reviews. Click the button below to browse existing reviews, or register an account to start submitting your own.</p>
-             {% endif %}           
-             <div class="row text-on-top">
-                 <!--Add a review-->
-                 {% if user.is_authenticated %}
-                 <div class="btn d-inline-block main-btn">
-                     <a class="btn btn-lg" id="add-review-button" href="{% url 'add_recipes' %}" class="recipes-link">
-                     Add recipes here +</a>
-                 </div>
-                 {% endif %} 
-             </div>
-         </div>    
-    </div>    
- </div>
+        <div class="text-center text-white header-text">
+             <h1 class="text-center page-title">Welcome to NonAlco4me</h1>
+        </div>
+        <div id="add-recipes" class="container-fluid hero-container">
+            <div class="col-12" id="hero-text-container">
+                <div id="add-recipes-text" class="text-center text-white header-text">
+                     {% if user.is_authenticated %}
+                     <p>Your first destination for peer book reviews. Click the button below to browse existing reviews, or submit your own.</p>
+                     {% else %}
+                     <p>Your first destination for peer book reviews. Click the button below to browse existing reviews, or register an account to start submitting your own.</p>
+                     {% endif %}           
+                     <div class="row text-on-top">
+                         <!--Add a recipes-->
+                         {% if user.is_authenticated %}
+                         <div class="btn d-inline-block main-btn">
+                             <a class="btn btn-lg" id="add-review-button" href="{% url 'add_recipes' %}" class="recipes-link">
+                             Add recipes here +</a>
+                         </div>
+                         {% endif %} 
+                     </div>
+                 </div>    
+            </div>    
+         </div>
+    </div>
+</div>
+<div id="about-text" class="container-fluid hero-container text-center">
+    <hr>
+    <h3 class="col-12">About us</h3>
+    <hr>
+    <p>Will you do the same for me? It's time to face the music I'm no longer your muse. Heard it's beautiful, be the judge and my girls gonna take a vote. I can feel a phoenix inside of me. Heaven is jealous of our love, angels are crying from up above. Yeah, you take me to utopia.</p>
+</div>
+
 {% endblock content %}

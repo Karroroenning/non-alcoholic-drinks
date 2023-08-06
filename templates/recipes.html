@@ -11,13 +11,6 @@
         <hr>
     </div>
 </section>
-{% if user.is_authenticated %}
-        {% if submitted in add_recipes %}
-                    <div class="alert alert-success" role="alert">
-                        Your recipes is awaiting approval
-                    </div>
-        {% endif %}
-        {% endif %}
 
 <div class="container-fluid">
     <div class="row">
@@ -31,8 +24,8 @@
                         <div class="card-body">
                             <div class="image-container">
                                 {% if "placeholder" in recipes.featured_image.url %}
-                                <img class="card-img-top"
-                                    src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
+                                <img id="card-img" class="card-img-top"
+                                    src="/static/images/pexels-taryn-elliott-4457151_copy.jpg">
                                 {% else %}
                                 <img class="card-img-top" src=" {{ recipes.featured_image.url }}">
                                 {% endif %}
@@ -41,11 +34,11 @@
                                 </div>
                             </div>
                             <a href="{% url 'recipes-detail' recipes.slug %}" class="recipes-link">
-                                <h2 class="card-title">{{ recipes.title }}</h2>
+                                <h4 class="card-title">{{ recipes.title }}</h4>
                                 <p class="card-text">{{ recipes.creator }}</p>
                             </a>
                             <hr/>
-                            <p class="card-text text-muted h6">{{ recipes.created_on }} <i class="far fa-heart"></i>
+                            <p class="card-text text-muted h6"><i class="far fa-heart"></i>
                                 {{ recipes.number_of_likes }}</p>
                         </div>
                     </div>
