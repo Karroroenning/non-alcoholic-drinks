@@ -90,7 +90,7 @@ def add_recipes(request):
         if recipes_form.is_valid():
             recipes_form.instance.creator = request.user
             recipes_form.save()
-            messages.add_message(request, messages.SUCCESS, 'Recipes awaiting moderation.')
+            messages.add_message(request, messages.SUCCESS, 'Your Recipes is awaiting approval.')
             return redirect('recipes-urls')
     else:
         recipes_form = RecipesForm
@@ -118,7 +118,7 @@ def edit_recipes(request, slug):
             recipes = recipes_form.save(commit=False)
             recipes.creator = request.user
             recipes.save()
-            messages.add_message(request, messages.SUCCESS, 'Recipes updated!')
+            messages.add_message(request, messages.SUCCESS, 'Recipe updated!')
             return redirect('recipes-urls')
     else:
         recipes_form = RecipesForm(instance=recipes)
@@ -130,5 +130,5 @@ def delete_recipes(request, slug):
     """Delete recipes"""
     recipes = get_object_or_404(Recipes, slug=slug)
     recipes.delete()
-    messages.add_message(request, messages.SUCCESS, 'Comment awaiting moderation.')
+    messages.add_message(request, messages.SUCCESS, 'Recipe deleted.')
     return redirect('recipes-urls')

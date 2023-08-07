@@ -4,20 +4,6 @@
 {% load crispy_forms_tags %}
 {% block content %}
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 offset-md-2">
-            {% for message in messages %}
-            <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
-                {{ message | safe }}
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-            {% endfor %}
-        </div>
-    </div>
-</div>
-
-
 <section>
     <div class="container-fluid px-4 px-lg-5">
         <h1 class="mb-4 mt-3 text-center">
@@ -40,7 +26,7 @@
                             <div class="image-container">
                                 {% if "placeholder" in recipes.featured_image.url %}
                                 <img id="card-img" class="card-img-top"
-                                    src="/static/images/pexels-taryn-elliott-4457151_copy1.jpg">
+                                    src="https://res.cloudinary.com/dbygidw1x/image/upload/v1691410422/static/images/pexels-taryn-elliott-4457151_copy1.a76955cb4e72.jpg">
                                 {% else %}
                                 <img class="card-img-top" src=" {{ recipes.featured_image.url }}">
                                 {% endif %}
@@ -67,15 +53,8 @@
             </div>
         </div>
     </div>
-    <script>
-        setTimeout(function () {
-            let messages = document.getElementById('msg');
-            let alert = new bootstrap.Alert(messages);
-            alert.close();
-        }, 2000);
-    </script>
-    
-    <!-- {% if is_paginated %}
+
+{% if is_paginated %}
     <nav aria-label="Page navigation">
         <ul class="pagination justify-content-center">
             {% if page_obj.has_previous %}
@@ -87,6 +66,6 @@
             {% endif %}
         </ul>
     </nav>
-    {% endif %} -->
+    {% endif %}
 </div>
 {% endblock content %}
