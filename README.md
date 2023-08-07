@@ -1,108 +1,240 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# NonAlco4Me
 
-Welcome karolina Rönning,
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+![]()
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+Please view the live website here: [NonAlco4Me](https://non-alco-4me-427be0bd27b2.herokuapp.com/ "NonAlco4Me Homepage").
 
-## Gitpod Reminders
+## Table of contents
++ [UX](#ux)
+  + [Site Purpose](#site-purpose)
+  + [Site Goal](#site-goal)
+  * [Audience](#audience)
+  * [Communication](#communication)
+  * [Current User Goals](#current-user-goals)
+  * [New User Goals](#new-user-goals)
+  * [Future Goals](#future-goals)
+* [User Stories](#user-stories)
+  * [Pilot](#pilot)
+  * [Admin](#admin)
+* [Design](#design)
+  * [Wireframes](#wireframes)
+  * [Site Navigation](#site-navigation)
+  * [Database Schema](#database-schema)
+  * [Color Scheme](#color-scheme)
+  * [Typeography](#typography)
+  * [Imagery](#imagery)
+* [Features](#features)
+  * [Homepage](#homepage)
+  * [Recipes Home](#recipes-home)
+  * [Site Detail](#site-detail)
+  * [Contact](#contact-page)
+  * [Sign-In](#sign-in)
+  * [Sign-Out](#sign-out)
+  * [Sign-Up](#sign-up)
+* [C.R.U.D.](#crud)
+  * [Create](#create)
+  * [Read](#read)
+  * [Update](#update)
+  * [Delete](#delete)
+* [Future Features](#future-features)
+* [Manual Testing](#manual-testing)
+* [Automated Testing](#automated-testing)
+* [Validator Testing](#fixed-bugs)
+* [Accessibility](#accessibility)
+* [Technologies Used](#technologies-used)
+* [Deployment](#deployment)
+* [Credits](#credits)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## UX
+### Site Purpose
 
-`python3 -m http.server`
 
-A blue button should appear to click: _Make Public_,
+### Site Goal
 
-Another blue button should appear to click: _Open Browser_.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+### Audience
 
-A blue button should appear to click: _Make Public_,
 
-Another blue button should appear to click: _Open Browser_.
+### Communication
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
 
-To log into the Heroku toolbelt CLI:
+### Current User Goals
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+### New User Goals
 
-------
 
-## Release History
+### Future Goals
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+## Epics
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+## User Stories
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+### Pilot 
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+### Admin
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+## Design
+### Wireframes
+![]()
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+### Site Navigation
+![]()
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+### Database Schema
+![]()
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+### Color Scheme
+![]()
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+### Typography:
 
-------
 
-## FAQ about the uptime script
+### Imagery:
 
-**Why have you added this script?**
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+## Features
+### Homepage
 
-**How will this affect me?**
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+### Recipes Sites
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+### Recipes detail
 
-**So….?**
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
 
-**Can I opt out?**
+### Contact Page
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+### Sign-in
 
-**Anything more?**
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+### Sign-out
 
----
 
-Happy coding!
+### Sign-up
+
+
+## C.R.U.D.
+### Create
+### Site Upload
+
+
+
+### Site comments (gallery comments are the same)
+
+
+## Read
+
+
+## Update
+
+
+### Edit Site
+
+
+## Delete
+
+### Delete Recipe
+
+
+## Future features
+
+
+## Manual Testing
+### Homepage
+
+
+### Recipes Home
+
+
+
+### Comments
+
+
+## Automated testing
+
+
+### Browsers
+
+## Validator Testing
+- HTML files pass through the W3C validator with no issues found.
+- CSS files pass through the Jigsaw validator with no issues found.
+- Python files have been through the validator and have no issues.
+
+## Fixed bugs
+
+
+## Accessibility
+
+
+## Technologies Used
+### Main Languages Used
+- HTML5
+- CSS3
+- Python
+- Django
+- SQL - Postgres
+
+### Frameworks, Libraries & Programs Used
+- Google Fonts - for the font families:
+- Font Awesome - to add icons to the social links in the footer element.
+- VSC - to edit my code before pushing the project to Github.
+- GitHub - to store my repository for submission.
+- Balsamiq - were used to create mockups of the project prior to starting.
+- Am I Responsive? - to ensure the project looked good across all devices.
+- Favicon - to provide the code & image for the icon in the tab bar.
+- Django
+- Bootstrap
+- DrawSQL
+
+### Installed Packages:
+- 'django<4' gunicorn
+- dj_database_url psycopg2
+- dj3-cloudinary-storage
+- django-summernote (link)
+- django-allauth (link)
+- django-crispy-forms(link)
+
+## Deployment
+The site was deployed to Heroku. The steps to deploy are as follows:
+
+- Install Django & Gunicorn: pip3 install 'django<4' gunicorn
+- Install Django database & psycopg: pip3 install dj_database_url psycopg2
+- Install Cloudinary: pip3 install dj3-cloudinary-storage
+- Creating the requirements.txt file with the following command: pip3 freeze --local > requirements.txt
+- A django project was created using: django-admin startproject printstatements 
+- The Hillbox app was then created with: python3 manage.py startapp blog
+- Which was then added to the settings.py file within our project directory
+- The changes were then migrated using: python3 manage.py migrate.
+- Navigated to Heroku & created a new app called print-statements.
+- Added the Heroku Postgres database to the Resources tab.
+- Navigated to the Settings Tab, to add the following key/value pairs to the configvars:
+key: SECRET_KEY | value: randomkey
+key: PORT | value: 8000
+key: CLOUDINARY_URL | value: API environment variable
+key: DATABASE_URL | value: value supplied by Heroku
+- Added the DATABASE_URL, SECRET_KEY & CLOUDINARY_URL to the env.py file 
+- Added the DATABASE_URL, SECRET_KEY & CLOUDINARY_URL to the settings.py file
+- Add an import os statement for the env.py file.
+- Added Heroku to the ALLOWED_HOSTS in settings.py
+- Created the Procfile
+- Pushed the project to Github
+- Connected my github account to Heroku through the Deploy tab
+- Connected my github project repository, and then clicked on the "Deploy" button
+
+The live link for "NonAlco4Me" can be found [HERE](https://non-alco-4me-427be0bd27b2.herokuapp.com/)
+
+## Credits
+### Content
+
+
+## Images
