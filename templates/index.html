@@ -17,11 +17,13 @@
         </div>
         <div id="add-recipes" class="container-fluid hero-container">
             <div class="col-12" id="hero-text-container">
-                <div id="add-recipes-text" class="text-center text-white header-text">
+                <div id="add-recipes-text" class="p-3 text-center text-white header-text">
                      {% if user.is_authenticated %}
-                     <p>Your first destination for peer book reviews. Click the button below to browse existing reviews, or submit your own.</p>
+                     <p>
+                        Here you can look for a non-alcoholic drink that strives for your needs. Or add a recipe yourself by pressing the button below.</p>
                      {% else %}
-                     <p>Your first destination for peer book reviews. Click the button below to browse existing reviews, or register an account to start submitting your own.</p>
+                     <p>
+                        Here you can look for a non-alcoholic drink that strives for your needs. Or add a recipe yourself by <a class="sign-not-loggedin" href="{% url 'account_signup' %}">Signup</a> on the site or <a class="sign-not-loggedin" href="{% url 'account_login' %}">log in</a>.</p>
                      {% endif %}           
                      <div class="row text-on-top">
                          <!--Add a recipes-->
@@ -41,7 +43,13 @@
     <hr>
     <h3 class="col-12">About us</h3>
     <hr>
-    <p>Will you do the same for me? It's time to face the music I'm no longer your muse. Heard it's beautiful, be the judge and my girls gonna take a vote. I can feel a phoenix inside of me. Heaven is jealous of our love, angels are crying from up above. Yeah, you take me to utopia.</p>
+    <p>
+        Do you feel like you want to cool off with a good non-alcoholic drink but a regular soft drink is not something you prefer today. <br>
+        Then you will find a drink that meets your needs on this page.
+    <br>
+    There are lots of different flavors and combinations. Maybe you fancy something fruity and sweet or why not a good lemon and tonic. <br>
+    In addition to the drinks being delicious, they also look very good. <br> 
+    Those who see your drink will definitely want one too. </p>
 </div>
 
 {% endblock content %}
