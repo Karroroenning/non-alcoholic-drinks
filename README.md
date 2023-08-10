@@ -31,6 +31,7 @@ Please view the live website here: [NonAlco4Me](https://non-alco-4me-427be0bd27b
   * [Recipes Home](#recipes-home)
   * [Recipes Detail](#recipes-detail)
   * [Edit ecipes](#edit-recipes)
+  * [Delete ecipes](#delete-recipes)
   * [Contact](#contact-page)
   * [Sign-In](#sign-in)
   * [Sign-Out](#sign-out)
@@ -169,74 +170,219 @@ Font: Lato
 
 ## Features
 ### Homepage
-- A navbar with nav-items to navigate to various pages in the website
+- A navbar with nav-items to navigate to various pages in the website.
 - We have the hero image with a short info text in it if you are not logged in and if you are logged in there is a button to press called "Add Recipes here +".
 - About section is under hero image, there is some information about the page.
 - Footer with social media, adress and email.
 
 ### Add Recipes
+- You press "add recipe +" on the homepage and you get to the add recipes page.
+- A navbar with nav-items to navigate to various pages in the website.
+- We have an add recipe form. Enter Title on the recipe, Author for the recipe, a body where you write your recipe and a button where you choose an image you want for the recipe. If you do not select an image, it will be a placeholder image.
+- Submit button under the form.
+- Footer with social media, adress and email.
 
 ### Recipes Sites
-
+- A navbar with nav-items to navigate to various pages in the website.
+- Recipes lined up. 3 pieces per row. 9 pieces per side.
+- On the recipes there is a line where you can see who has created the recipe.
+- Under the recipe you can see how many people have liked the recipe.
+- When you click on the recipe, you get to recipe details.
+- Footer with social media, adress and email.
 
 ### Recipes detail
+- A navbar with nav-items to navigate to various pages in the website.
+- Under the navbar, we have the title of the recipe, author and when it was created. Picture of the recipe is to the right of the text.
+- If you have created the recipe yourself, there are two buttons under the title. One where it says edit and one with delete. You can only see those buttons if you are logged in and have created the recipe yourself.
+- A section with the contents of the recipe.
+- Like button and how many people have liked. The heart is in a red color if you have liked the recipe. 
+- Comments icon showing how many people have commented on the recipe.
+- The comments section. On the left, all comments that have been written are displayed.
+- On the right you write a comment if you are logged in.
+- Footer with social media, adress and email.
 
 ### Edit Recipes
+- A navbar with nav-items to navigate to various pages in the website.
+- Only when you are logged in and have made the recipe.
+- We have an edit recipe form. You can change the title, recipe content and image.
+- Submit button.
+- Footer with social media, adress and email.
+
+### Delete Recipes
+- A navbar with nav-items to navigate to various pages in the website.
+- Only when you are logged in and have made the recipe.
+- When you press the delete button, we get an alert message if you want to delete the recipe. There are two buttons, cancel and delete.
+- Footer with social media, adress and email.
 
 ### Contact Page
-
+- A navbar with nav-items to navigate to various pages in the website.
+- When you are logged in. 
+- A contact form. With first name, last name, email and message.
+- On the right we have a google map and where the office is located.
+- Footer with social media, adress and email.
 
 ### Sign-in
-
+- A navbar with nav-items to navigate to various pages in the website.
+- A box where it says if you want to log out. 
+- A logout button.
+- Footer with social media, adress and email.
 
 ### Sign-out
-
+- A navbar with nav-items to navigate to various pages in the website.
+- A login box where you enter your username and password.
+- A login button.
+- Footer with social media, adress and email.
 
 ### Sign-up
-
+- A navbar with nav-items to navigate to various pages in the website.
+- A signup box where you enter your username, email, password and password (again) and a sign up button.
+- If you already have a login, there is a link below that you can press.
+- Footer with social media, adress and email.
 
 ## C.R.U.D.
-### Create Recipes
-### Read Recipes
-### Update Recipes
-### Delete Recipes
-
-
-
-### Recipes comments (gallery comments are the same)
-
-
-## Read
 
 ## Create
 
+### Create Recipes and Comments
+<details><summary>- Create Recipes</summary>
+<img src="documentation/crud/create_recipes.png" >
+</details>
+<details><summary>- Create Comments</summary>
+<img src="documentation/crud/comment_recipes.png" >
+</details>
+<details><summary>- Comment Approve</summary>
+<img src="documentation/crud/approve_comment_recipes.png" >
+</details>
 
-### Update Recipes
+## Read
 
-## Edit Recipes
+### Read Recipes and Comments
+<details><summary>- Read Recipes and Comments</summary>
+<img src="documentation/crud/read_recipes.png" >
+</details>
 
+## Update Recipes
 
-### Delete Recipe
+### Edit Recipes
+<details><summary>- Edit Recipes</summary>
+<img src="documentation/crud/edit_recipes.png" >
+</details>
 
+## Delete Recipe
 
-## Future features
+### Delete Recipes
+<details><summary>- Delete Recipes</summary>
+<img src="documentation/crud/delete_recipes.png" >
+</details>
 
 
 ## Manual Testing
+
+### Not logged in:
+
 ### Homepage
+I have manually tested every link on the homepage to ensure that it redirects to the appropriate url.
+#### Navbar
+
+<details><summary>- Home, I come to the homepage again.</summary>
+<img src="documentation/testing/Home_page_logout.png" >
+</details>
 
 
-### Recipes Home
+<details><summary>- Recipes, I come to the recipes.</summary>
+<img src="documentation/testing/Recipes_Page.png" >
+</details>
 
 
+<details><summary>- Login, I come to the login.</summary>
+<img src="documentation/testing/login_Page.png" >
+</details>
 
-### Comments
+
+<details><summary>- Register, I come to the register</summary>
+<img src="documentation/testing/signup_Page.png" >
+</details>
+
+#### Hero Image
+
+<details><summary>- Signup, I come to the register.</summary>
+<img src="documentation/testing/signup_Page.png" >
+</details>
 
 
-## Automated testing
+<details><summary>- Login, I come to the login.</summary>
+<img src="documentation/testing/login_Page.png" >
+</details>
+
+#### Footer Links
+
+<details><summary>- Twitter, It open up a new tab with Twitter.</summary>
+<img src="documentation/testing/twitter_tab.png" >
+</details>
+
+<details><summary>- Linkedin, It open up a new tab with Linkedin.</summary>
+<img src="documentation/testing/linkedin_tab.png" >
+</details>
+
+<details><summary>- Instagram, It open up a new tab with Instagram.</summary>
+<img src="documentation/testing/instagram_tab.png" >
+</details>
+
+<details><summary>- Facebook, It open up a new tab with Facebook.</summary>
+<img src="documentation/testing/facebook_tab.png" >
+</details>
+
+<details><summary>- Copyright: NonAlco4Me, I come to the homepage again.</summary>
+<img src="documentation/testing/Home_page.png" >
+</details>
+
+
+### Recipes page
+On the recipes page, we still have our navbar where all links work and a footer that is the same as on the first page. The links you can click on here are on the title that is under the pictures. Then you get to recipes detail and then if there are more than 9 recipes on the page, we have a next button that shows more recipes when you press it.
+
+#### The next side
+<details><summary>- The next side button which is at the bottom of the page, I come to the next recipe side.</summary>
+<img src="documentation/testing/Recipes_details_next_side.png" >
+</details>
+
+#### Recipes Detail
+<details><summary>- Title under the recipes image, I come to the recipe details</summary>
+<img src="documentation/testing/Recipes_details.png" >
+</details>
+
+### Register page
+On the register page, we still have our navbar where all links work and a footer that is the same as on the first page. To register, you enter a username and password. Email is not a must. If you were to take a username that already exists, you will get an error message and even if the passwords do not match
+
+<details><summary>- Register page when you write your register info. </summary>
+<img src="documentation/testing/register_page_text.png" >
+</details>
+
+<details><summary>- When the username is already taken or the password do not match. </summary>
+<img src="documentation/testing/register_page_alert.png" >
+</details>
+
+<details><summary>- Signup button, if everything is correct. </summary>
+<img src="documentation/testing/signin_page.png" >
+</details>
+
+
+### Login page
+On the login page, we still have our navbar where all links work and a footer that is the same as on the first page. Here you enter your username and password and press login button. If the username and password are correct, you will be taken to the first page with a green alert message saying that you have logged in. If the username and password are not correct, you will receive an error message saying that the username or password is incorrect.
+
+<details><summary>- Login page, if everything is correct. </summary>
+<img src="documentation/testing/login_correct.png" >
+<img src="documentation/testing/signin_page.png" >
+</details>
+
+<details><summary>- Login page, if the username or password is incorrect. </summary>
+<img src="documentation/testing/login_error.png" >
+</details>
+
 
 
 ### Browsers
+- I checked the site for compatibility on different browsers.
+- I have checked the responsiveness on different window sizes.
 
 ## Validator Testing
 - HTML files pass through the W3C validator with no issues found.
