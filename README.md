@@ -359,14 +359,14 @@ On the recipes page, we still have our navbar where all links work and a footer 
 
 #### The next side
 
-<details><summary>- The next side button which is at the bottom of the page, I come to the next recipe side. And when I press prev button i come back to the first recipes page.</summary>
+<details><summary>- The next side button which is at the bottom of the page, I come to the next recipe side. And when I press prev button i come back to the previous recipes page.</summary>
 <img src="documentation/testing/Recipes_Page_click.png" >
 <img src="documentation/testing/Recipes_details_next_side.png" >
 <img src="documentation/testing/Recipes_Page_click_prev.png" >
 </details>
 
 #### Recipes Detail
-<details><summary>- Title under the recipes image, I come to the recipe details</summary>
+<details><summary>- I press on the title under the recipes image, I come to the recipe details</summary>
 <img src="documentation/testing/Recipes_details_next_side_click.png" >
 <img src="documentation/testing/Recipes_details.png" >
 </details>
@@ -470,28 +470,72 @@ I have manually tested every link on the homepage to ensure that it redirects to
 </details>
 
 ### Add Recipes page
+On the Add Recipes page page, we still have our navbar where all links work and a footer that is the same as on the first page. Here I write a title, chose author, write my recipes text and chose a recipe cover image if I want to. If I not chose an image it will give the recipes a placeholder image. Then I press the submit button and I will come to the recipes page with an alert message that the recipes is awaiting approval.
 
-<details><summary>- Add recipes + button on the homepage, I come to the add recipes.</summary>
+<details><summary>- I press "Add recipes +" button on the homepage, I come to the add recipes.</summary>
 <img src="documentation/testing/loggedin/empty_create_Page_login.png" >
 </details>
-<details><summary>- </summary>
-<img src="documentation/testing/loggedin/empty_create_Page_login.png" >
+<details><summary>- Create my recipes page</summary>
+<img src="documentation/testing/loggedin/create_Page_title_author_login.png" >
+<img src="documentation/testing/loggedin/create_Page_image_submit_login.png" >
+<img src="documentation/testing/loggedin/recipe_approval_login.png" >
 </details>
 
 ### Recipes page
-On the recipes page, we still have our navbar where all links work and a footer that is the same as on the first page. The links you can click on here are on the title that is under the pictures. Then you get to recipes detail and then if there are more than 9 recipes on the page, we have a next button that shows more recipes when you press it.
+On the recipes page, we still have our navbar where all links work and the footer that is the same as on the homepage. The links you can click on here are on the title that is under the pictures and then if there are more than 9 recipes on the page, we have a next button that shows more recipes when you press it.
 
 #### The next side
-<details><summary>- The next side button which is at the bottom of the page, I come to the next recipe side.</summary>
-<img src="documentation/testing/Recipes_details_next_side.png" >
+<details><summary>- When I press the next side button which is at the bottom of the page, I come to the next recipe side. And when I press prev button I come back to the previous recipes page.</summary>
+<img src="documentation/testing/Recipes_Page_click.png" >
+<img src="documentation/testing/loggedin/Recipes_Page_click_prev_login.png" >
 </details>
 
-#### Recipes Detail
-<details><summary>- Title under the recipes image, I come to the recipe details</summary>
-<img src="documentation/testing/Recipes_details.png" >
+#### When my recipes is approved
+<details><summary>- When my recipe is approved by admin, the recipe ends up on the first page.</summary>
+<img src="documentation/testing/loggedin/Recipes_approved_login.png" >
 </details>
 
 
+### Recipes Detail
+
+#### Not my own recipes
+Here I can like the recipe and write a comment. When I have written a comment, I press submit and the comment is sent to the admin for approval before it is published. To like the recipe, I press the heart which turns red when you have liked it.
+
+<details><summary>- When I press on the title under the recipes image, I come to the recipe details</summary>
+<img src="documentation/testing/loggedin/Recipes_details_login.png" >
+<img src="documentation/testing/loggedin/Recipes_details_like_comment_login.png" >
+<img src="documentation/testing/loggedin/Recipes_details_comment_approval_login.png" >
+</details>
+
+<details><summary>- When my comment is approved by admin, the comment ends up under the recipe.</summary>
+<img src="documentation/testing/loggedin/Recipes_details_comment_is_approved_login.png" >
+</details>
+
+
+#### My own recipes
+Here I can like the recipe and write a comment. When I have written a comment, I press submit and the comment is sent to the admin for approval before it is published. To like the recipe, I press the heart which turns red when you have liked it. Now that it is my own recipe, two buttons have been added, Edit and Delete. When I press the Edit button, I get to the Edit page where I can update my recipe.
+When I press the delete button, I get an alert message asking me if I really want to read my recipe.
+
+<details><summary>- When I press on the title under the recipes image on my own recipe I created, I come to the recipe details.</summary>
+<img src="documentation/testing/loggedin/myown_Recipes_login.png" >
+<img src="documentation/testing/loggedin/myown_Recipes_details_like_comment_login.png" >
+<img src="documentation/testing/loggedin/myown_Recipes_details_comment_approval_login.png" >
+</details>
+
+<details><summary>- When my comment is approved by admin, the comment ends up under the recipe.</summary>
+<img src="documentation/testing/loggedin/myown_Recipes_details_comment_is_approved_login.png" >
+</details>
+
+<details><summary>- I press on the Edit button, I come to the Edit page. I change what is needed and press submit, then I am sent to the Recipes page and an alert message has appeared saying that the recipe has been updated. </summary>
+<img src="documentation/testing/loggedin/myown_Recipes_details_edit_delete_button_login.png" >
+<img src="documentation/testing/loggedin/myown_Recipes_details_edit_login.png" >
+<img src="documentation/testing/loggedin/myown_Recipes_updated_login.png" >
+</details>
+
+<details><summary>- When I press the delete button, I get an alert message asking if I really want to delete my recipes. When you press delete, you get to the recipe page with an alert message saying that the recipe has been deleted.</summary>
+<img src="documentation/testing/loggedin/myown_Recipes_details_delete_login.png" >
+<img src="documentation/testing/loggedin/myown_Recipes_details_delete_success_login.png" >
+</details>
 
 ### Browsers
 - I checked the site for compatibility on different browsers.
