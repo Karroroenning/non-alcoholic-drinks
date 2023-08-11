@@ -241,9 +241,9 @@ Font: Lato
 
 ## C.R.U.D.
 
-## Create
+### Create:
 
-### Create Recipes and Comments
+#### Create Recipes and Comments
 <details><summary>- Create Recipes</summary>
 <img src="documentation/crud/create_recipes.png" >
 </details>
@@ -254,23 +254,23 @@ Font: Lato
 <img src="documentation/crud/approve_comment_recipes.png" >
 </details>
 
-## Read
+### Read:
 
-### Read Recipes and Comments
+#### Read Recipes and Comments
 <details><summary>- Read Recipes and Comments</summary>
 <img src="documentation/crud/read_recipes.png" >
 </details>
 
-## Update Recipes
+### Update:
 
-### Edit Recipes
+#### Edit Recipes
 <details><summary>- Edit Recipes</summary>
 <img src="documentation/crud/edit_recipes.png" >
 </details>
 
-## Delete Recipe
+### Delete:
 
-### Delete Recipes
+#### Delete Recipes
 <details><summary>- Delete Recipes</summary>
 <img src="documentation/crud/delete_recipes.png" >
 </details>
@@ -282,6 +282,10 @@ Font: Lato
 
 ### Homepage
 I have manually tested every link on the homepage to ensure that it redirects to the appropriate url.
+<details><summary>- Navbar</summary>
+<img src="documentation/testing/Navbar_click_logout.png" >
+</details>
+
 #### Navbar
 
 <details><summary>- Home, I come to the homepage again.</summary>
@@ -303,7 +307,14 @@ I have manually tested every link on the homepage to ensure that it redirects to
 <img src="documentation/testing/signup_Page.png" >
 </details>
 
+<details><summary>- NonAlco4Me, I come to the homepage again.</summary>
+<img src="documentation/testing/Home_page_logout.png" >
+</details>
+
 #### Hero Image
+<details><summary>- Hero Image</summary>
+<img src="documentation/testing/Home_page_click_logout.png" >
+</details>
 
 <details><summary>- Signup, I come to the register.</summary>
 <img src="documentation/testing/signup_Page.png" >
@@ -315,6 +326,10 @@ I have manually tested every link on the homepage to ensure that it redirects to
 </details>
 
 #### Footer Links
+
+<details><summary>- Footer</summary>
+<img src="documentation/testing/footer.png" >
+</details>
 
 <details><summary>- Twitter, It open up a new tab with Twitter.</summary>
 <img src="documentation/testing/twitter_tab.png" >
@@ -333,20 +348,26 @@ I have manually tested every link on the homepage to ensure that it redirects to
 </details>
 
 <details><summary>- Copyright: NonAlco4Me, I come to the homepage again.</summary>
-<img src="documentation/testing/Home_page.png" >
+<img src="documentation/testing/Home_page_logout.png" >
 </details>
-
 
 ### Recipes page
 On the recipes page, we still have our navbar where all links work and a footer that is the same as on the first page. The links you can click on here are on the title that is under the pictures. Then you get to recipes detail and then if there are more than 9 recipes on the page, we have a next button that shows more recipes when you press it.
+<details><summary>- Recipes, I come to the recipes.</summary>
+<img src="documentation/testing/Recipes_Page.png" >
+</details>
 
 #### The next side
-<details><summary>- The next side button which is at the bottom of the page, I come to the next recipe side.</summary>
+
+<details><summary>- The next side button which is at the bottom of the page, I come to the next recipe side. And when I press prev button i come back to the first recipes page.</summary>
+<img src="documentation/testing/Recipes_Page_click.png" >
 <img src="documentation/testing/Recipes_details_next_side.png" >
+<img src="documentation/testing/Recipes_Page_click_prev.png" >
 </details>
 
 #### Recipes Detail
 <details><summary>- Title under the recipes image, I come to the recipe details</summary>
+<img src="documentation/testing/Recipes_details_next_side_click.png" >
 <img src="documentation/testing/Recipes_details.png" >
 </details>
 
@@ -361,21 +382,113 @@ On the register page, we still have our navbar where all links work and a footer
 <img src="documentation/testing/register_page_alert.png" >
 </details>
 
-<details><summary>- Signup button, if everything is correct. </summary>
-<img src="documentation/testing/signin_page.png" >
+<details><summary>- Signup button, if everything is correct. I come to the homepage logged in. </summary>
+<img src="documentation/testing/home_login.png" >
 </details>
 
 
 ### Login page
 On the login page, we still have our navbar where all links work and a footer that is the same as on the first page. Here you enter your username and password and press login button. If the username and password are correct, you will be taken to the first page with a green alert message saying that you have logged in. If the username and password are not correct, you will receive an error message saying that the username or password is incorrect.
 
-<details><summary>- Login page, if everything is correct. </summary>
+<details><summary>- Login page, if everything is correct, I come to the homepage logged in when i press login button. </summary>
 <img src="documentation/testing/login_correct.png" >
-<img src="documentation/testing/signin_page.png" >
+<img src="documentation/testing/home_login.png" >
 </details>
 
 <details><summary>- Login page, if the username or password is incorrect. </summary>
 <img src="documentation/testing/login_error.png" >
+</details>
+
+### Logged in:
+
+### Homepage
+I have manually tested every link on the homepage to ensure that it redirects to the appropriate url.
+<details><summary>- Navbar</summary>
+<img src="documentation/testing/loggedin/Navbar_click_login.png" >
+</details>
+
+#### Navbar
+
+<details><summary>- Home, I come to the homepage again.</summary>
+<img src="documentation/testing/loggedin/Home_page_login.png" >
+</details>
+
+
+<details><summary>- Recipes, I come to the recipes.</summary>
+<img src="documentation/testing/loggedin/Recipes_Page_login.png" >
+</details>
+
+
+<details><summary>- Logout, I come to the logout.</summary>
+<img src="documentation/testing/loggedin/logout_Page_login.png" >
+</details>
+
+
+<details><summary>- Contact, I come to the contact</summary>
+<img src="documentation/testing/loggedin/contact_Page_login.png" >
+</details>
+
+<details><summary>- NonAlco4Me, I come to the homepage again.</summary>
+<img src="documentation/testing/loggedin/Home_page_login.png" >
+</details>
+
+#### Hero Image
+
+<details><summary>- Add recipes +, I come to the add recipes.</summary>
+<img src="documentation/testing/loggedin/Home_page_click_login.png" >
+<img src="documentation/testing/loggedin/empty_create_Page_login.png" >
+</details>
+
+#### Footer Links
+
+<details><summary>- Footer</summary>
+<img src="documentation/testing/footer.png" >
+</details>
+
+<details><summary>- Twitter, It open up a new tab with Twitter.</summary>
+<img src="documentation/testing/twitter_tab.png" >
+</details>
+
+<details><summary>- Twitter, It open up a new tab with Twitter.</summary>
+<img src="documentation/testing/twitter_tab.png" >
+</details>
+
+<details><summary>- Linkedin, It open up a new tab with Linkedin.</summary>
+<img src="documentation/testing/linkedin_tab.png" >
+</details>
+
+<details><summary>- Instagram, It open up a new tab with Instagram.</summary>
+<img src="documentation/testing/instagram_tab.png" >
+</details>
+
+<details><summary>- Facebook, It open up a new tab with Facebook.</summary>
+<img src="documentation/testing/facebook_tab.png" >
+</details>
+
+<details><summary>- Copyright: NonAlco4Me, I come to the homepage again.</summary>
+<img src="documentation/testing/loggedin/Home_page_login.png" >
+</details>
+
+### Add Recipes page
+
+<details><summary>- Add recipes + button on the homepage, I come to the add recipes.</summary>
+<img src="documentation/testing/loggedin/empty_create_Page_login.png" >
+</details>
+<details><summary>- </summary>
+<img src="documentation/testing/loggedin/empty_create_Page_login.png" >
+</details>
+
+### Recipes page
+On the recipes page, we still have our navbar where all links work and a footer that is the same as on the first page. The links you can click on here are on the title that is under the pictures. Then you get to recipes detail and then if there are more than 9 recipes on the page, we have a next button that shows more recipes when you press it.
+
+#### The next side
+<details><summary>- The next side button which is at the bottom of the page, I come to the next recipe side.</summary>
+<img src="documentation/testing/Recipes_details_next_side.png" >
+</details>
+
+#### Recipes Detail
+<details><summary>- Title under the recipes image, I come to the recipe details</summary>
+<img src="documentation/testing/Recipes_details.png" >
 </details>
 
 
