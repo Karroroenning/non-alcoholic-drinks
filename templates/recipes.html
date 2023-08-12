@@ -26,9 +26,9 @@
                             <div class="image-container">
                                 {% if "placeholder" in recipes.featured_image.url %}
                                 <img id="card-img" class="card-img-top"
-                                    src="https://res.cloudinary.com/dbygidw1x/image/upload/v1691410422/static/images/pexels-taryn-elliott-4457151_copy1.a76955cb4e72.jpg">
+                                    src="https://res.cloudinary.com/dbygidw1x/image/upload/v1691410422/static/images/pexels-taryn-elliott-4457151_copy1.a76955cb4e72.jpg" alt="a drink with lime and mint. Stands on a wooden tray">
                                 {% else %}
-                                <img class="card-img-top" src=" {{ recipes.featured_image.url }}">
+                                <img class="card-img-top" src=" {{ recipes.featured_image.url }}" alt="recipe picture of a drink that the user has chosen himself">
                                 {% endif %}
                                 <div class="image-flash">
                                     <p class="author">Creator: {{ recipes.author }}</p>
@@ -38,7 +38,7 @@
                                 <h4 class="card-title">{{ recipes.title }}</h4>
                                 <p class="card-text">{{ recipes.creator }}</p>
                             </a>
-                            <hr/>
+                            <hr>
                             <p class="card-text text-muted h6"><i class="far fa-heart"></i>
                                 {{ recipes.number_of_likes }}</p>
                         </div>
