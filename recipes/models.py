@@ -28,7 +28,7 @@ class Recipes(models.Model):
     def save(self, *args, **kwargs):
         self.slug = slugify(self.title)
         super(Recipes, self).save(*args, **kwargs)
-        
+
     class Meta:
         ordering = ["-created_on"]
 
@@ -58,8 +58,8 @@ class Recipes(models.Model):
 
 class Comment(models.Model):
 
-    recipes = models.ForeignKey(Recipes, on_delete=models.CASCADE,
-                             related_name="comments")
+    recipes = models.ForeignKey(
+        Recipes, on_delete=models.CASCADE, related_name="comments")
     name = models.CharField(max_length=80)
     email = models.EmailField(default='')
     body = models.TextField()

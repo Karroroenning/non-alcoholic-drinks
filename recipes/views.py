@@ -20,7 +20,8 @@ class RecipesDetail(View):
     def get(self, request, slug, *args, **kwargs):
         queryset = Recipes.objects.filter(status=1)
         recipes = get_object_or_404(queryset, slug=slug)
-        comments = recipes.comments.filter(approved=True).order_by("-created_on")
+        comments = recipes.comments.filter(approved=True).order_by
+        ("-created_on")
         liked = False
         if recipes.likes.filter(id=self.request.user.id).exists():
             liked = True
@@ -40,7 +41,8 @@ class RecipesDetail(View):
     def post(self, request, slug, *args, **kwargs):
         queryset = Recipes.objects.filter(status=1)
         recipes = get_object_or_404(queryset, slug=slug)
-        comments = recipes.comments.filter(approved=True).order_by("-created_on")
+        comments = recipes.comments.filter(approved=True).order_by
+        ("-created_on")
         liked = False
         if recipes.likes.filter(id=self.request.user.id).exists():
             liked = True
@@ -90,7 +92,8 @@ def add_recipes(request):
         if recipes_form.is_valid():
             recipes_form.instance.creator = request.user
             recipes_form.save()
-            messages.add_message(request, messages.SUCCESS, 'Your Recipes is awaiting approval.')
+            messages.add_message
+            (request, messages.SUCCESS, 'Your Recipes is awaiting approval.')
             return redirect('recipes-urls')
     else:
         recipes_form = RecipesForm
@@ -100,7 +103,6 @@ def add_recipes(request):
         request,
         'add_recipes.html',
         {'recipes_form': recipes_form, 'submitted': submitted})
-
 
 
 @login_required()
