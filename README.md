@@ -497,6 +497,7 @@ On the recipes page, we still have our navbar where all links work and the foote
 
 
 ### Recipes Detail
+On the recipes detail page, we still have our navbar where all links work and the footer that is the same as on the homepage. 
 
 #### Not my own recipes
 Here I can like the recipe and write a comment. When I have written a comment, I press submit and the comment is sent to the admin for approval before it is published. To like the recipe, I press the heart which turns red when you have liked it.
@@ -536,6 +537,77 @@ When I press the delete button, I get an alert message asking me if I really wan
 <img src="documentation/testing/loggedin/myown_Recipes_details_delete_login.png" >
 <img src="documentation/testing/loggedin/myown_Recipes_details_delete_success_login.png" >
 </details>
+
+### Contact us page
+On the contact us page, we still have our navbar where all links work and the footer that is the same as on the homepage. Here we have a contact form and a google map. On googlemaps, I press the plus and minus buttons and everything works as it should. To get in touch with the owner of the website, I write in all the fields and press send. Then I get an alert message that it has been sent. If I only wanted a name in the mail field, I get an error message that it must contain an @.
+
+<details><summary>- Write in the contact form and send a message.</summary>
+<img src="documentation/testing/loggedin/contact_us_error_login.png" >
+<img src="documentation/testing/loggedin/contact_us_login.png" >
+<img src="documentation/testing/loggedin/contact_us_sent_mail_login.png" >
+</details>
+
+### Logout page
+On the logout page, we still have our navbar where all links work and the footer that is the same as on the homepage. When we press logout, we jump to the homepage and there we see an alert message that we are logged out
+
+<details><summary>- When we press logout, we jump to the Homepage.</summary>
+<img src="documentation/testing/loggedin/logout_Page_login.png" >
+<img src="documentation/testing/loggedin/logout_alert_login.png" >
+</details>
+
+
+## Admin panel
+<details><summary>- When we login to admin panel we come to the admin page.</summary>
+<img src="documentation/testing/admin/admin_login.png" >
+<img src="documentation/testing/admin/admin_panel.png" >
+</details>
+
+### Approve comments
+As a site admin I can approve comments so that suitability of content can be ensured. 
+
+<details><summary>- Comments can be selected and then approval can be performed via the dropdown menu:</summary>
+<img src="documentation/testing/admin/admin_panel_comments.png" >
+<img src="documentation/testing/admin/admin_approve_comments.png" >
+<img src="documentation/testing/admin/admin_panel_comment_approved.png" >
+</details>
+
+### Approve Recipes
+As a site admin I can approve recipes so that suitability of content can be ensured.
+<details><summary>- Reviews can be selected, and then approved and published:</summary>
+<img src="documentation/testing/admin/admin_panel_recipess.png" >
+<img src="documentation/testing/admin/admin_panel_recipess_grape.png" >
+<img src="documentation/testing/admin/admin_approve_recipess_grape.png" >
+<img src="documentation/testing/admin/admin_panel_recipess_grape_approved.png" >
+</details>
+
+### Add Recipes
+<details><summary>-As a site admin I can create recipes to share with other users.</summary>
+<img src="documentation/testing/admin/admin_panel_recipess.png" >
+<img src="documentation/testing/admin/admin_panel_add_recipes.png" >
+<img src="documentation/testing/admin/admin_panel_write_recipes.png" >
+<img src="documentation/testing/admin/admin_panel_save_recipes.png" >
+<img src="documentation/testing/admin/admin_panel_my_recipe.png" >
+</details>
+
+### Contact
+As a site admin I can view messages submitted via the contact form so that I can communicate with site users.
+
+<details><summary>- Within the admin panel, the admin can select Contacts:</summary>
+<img src="documentation/testing/admin/admin_panel_contact.png" >
+</details>
+
+<details><summary>- Here, the admin can click into messages to read them:</summary>
+<img src="documentation/testing/admin/admin_panel_contact_page.png" >
+<img src="documentation/testing/admin/admin_panel_contact_read.png" >
+</details>
+
+### Remove users
+As a site admin I can remove users so that they will no longer be able to post unsuitable content.
+<details><summary>- Here, the admin can select users to delete:</summary>
+<img src="documentation/testing/admin/admin_panel_delete.png" >
+<img src="documentation/testing/admin/admin_panel_delete_user.png" >
+</details>
+
 
 ### Browsers
 - I checked the site for compatibility on different browsers.
