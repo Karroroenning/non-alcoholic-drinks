@@ -124,6 +124,14 @@ body {
     background-color: rgba(0, 0, 0, 0.4);
 }
 
+#add-recipe-button {
+    color: #b49c73;
+}
+
+#add-recipe-button:hover {
+    color: #ffffff;
+}
+
 .sign-not-loggedin {
     color: #ffffff;
     text-decoration: underline;

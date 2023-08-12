@@ -11,9 +11,9 @@
     </div>
 </section>
 <div id="hero-image" class="img-fluid">
-    <div class="col-12" id="hero-text-container">
+    <div class="col-12">
         <div id="add-recipes" class="container-fluid hero-container">
-            <div class="col-12" id="hero-text-container">
+            <div class="col-12">
                 <div class="text-center text-white header-text">
                     <h1 class="text-center page-title">Welcome to NonAlco4me</h1>
                </div>
@@ -29,7 +29,7 @@
                          <!--Add a recipes-->
                          {% if user.is_authenticated %}
                          <div class="btn d-inline-block main-btn">
-                             <a class="btn btn-lg" id="add-review-button" href="{% url 'add_recipes' %}" class="recipes-link">
+                             <a class="btn btn-lg" id="add-recipe-button" href="{% url 'add_recipes' %}" class="recipes-link">
                              Add recipes here +</a>
                          </div>
                          {% endif %} 
