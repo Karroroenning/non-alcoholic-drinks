@@ -16,9 +16,9 @@
             <div class="d-none d-md-block col-md-6 masthead-image">
                 <!-- The featured image URL goes in the src attribute -->
                 {% if "placeholder" in recipes.featured_image.url %}
-                <img src="https://res.cloudinary.com/dbygidw1x/image/upload/v1691410422/static/images/pexels-taryn-elliott-4457151_copy1.a76955cb4e72.jpg" width="100%">
+                <img src="https://res.cloudinary.com/dbygidw1x/image/upload/v1691410422/static/images/pexels-taryn-elliott-4457151_copy1.a76955cb4e72.jpg" width="100%" alt="a drink with lime and mint. Stands on a wooden tray">
                 {% else %}
-                <img src=" {{ recipes.featured_image.url }}" width="100%">
+                <img src=" {{ recipes.featured_image.url }}" width="100%" alt="recipe picture of a drink that the user has chosen himself">
                 {% endif %}
             </div>
         </div>
@@ -66,11 +66,10 @@
             <div class="card-body">
                 <!-- The post content goes inside the card-text. -->
                 <!-- Use the | safe filter inside the template tags -->
-                <p class="card-text ">
+                <div class="card-text ">
                     {{ recipes.content | safe }}
-                </p>
+                </div>
                 <div class="row">
-
                     <div class="col-3">
                         <strong>
                             {% if user.is_authenticated %}

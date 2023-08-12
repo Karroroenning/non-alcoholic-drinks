@@ -5,28 +5,33 @@
 {% load crispy_forms_tags %}
 
 
+<section>
+    <div class="container-fluid px-4 px-lg-5">
+        <h2 class="mb-4 mt-3 text-center top-text">
+            Contact Us
+        </h2>
+        <hr>
+    </div>
+</section>
+
 <!-- Contact form -->
 <section id="contact">
     <div class="container card-body">
-        <div class="mt-3">
-            <h3 class="text-center">Contact Us</h3>
-        </div>
-        <hr>
-            <div class="row">
-                <div class="card col-12 col-md-6 contact-form">
-                    <div class="card-body">
-                        <form method="post">
-                            {{ contact_form | crispy }}
-                            {% csrf_token %}
-                            <br>
-                            <button type="submit" class="btn main-btn btn-signup">Send</button>
-                        </form>        
-                    </div>
+        <div class="row">
+            <div class="card col-12 col-md-6 contact-form">
+                <div class="card-body">
+                    <form method="post">
+                        {{ contact_form | crispy }}
+                        {% csrf_token %}
+                         <br>
+                        <button type="submit" class="btn main-btn btn-signup">Send</button>
+                    </form>        
                 </div>
-                <div id="map" class="col-12 col-md-6"></div>
             </div>
+            <div id="map" class="col-12 col-md-6"></div>
+        </div>
     </div>
-
+</section>
     <script>
         var APIKey = "AIzaSyD-B1mZqSWhwklRPd0vr7ij6BD1Qb4NeUE";
     </script>
