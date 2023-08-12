@@ -16,9 +16,9 @@
             <div class="d-none d-md-block col-md-6 masthead-image">
                 <!-- The featured image URL goes in the src attribute -->
                 {% if "placeholder" in recipes.featured_image.url %}
-                <img src="https://res.cloudinary.com/dbygidw1x/image/upload/v1691410422/static/images/pexels-taryn-elliott-4457151_copy1.a76955cb4e72.jpg" width="100%" alt="a drink with lime and mint. Stands on a wooden tray">
+                <img class="width-image" src="https://res.cloudinary.com/dbygidw1x/image/upload/v1691410422/static/images/pexels-taryn-elliott-4457151_copy1.a76955cb4e72.jpg" alt="a drink with lime and mint. Stands on a wooden tray">
                 {% else %}
-                <img src=" {{ recipes.featured_image.url }}" width="100%" alt="recipe picture of a drink that the user has chosen himself">
+                <img class="width-image" src=" {{ recipes.featured_image.url }}" alt="recipe picture of a drink that the user has chosen himself">
                 {% endif %}
             </div>
         </div>
@@ -71,8 +71,7 @@
                 </div>
                 <div class="row">
                     <div class="col-3">
-                        <strong>
-                            {% if user.is_authenticated %}
+                        {% if user.is_authenticated %}
                             <form class="d-inline" action="{% url 'recipes_like' recipes.slug %}" method="POST">
                                 {% csrf_token %}
                                 {% if liked %}
@@ -84,13 +83,15 @@
                             {% else %}
                             <span class="text-secondary"><i class="far fa-heart"></i></span>
                             {% endif %}
-                        <!-- The number of likes goes before the closing strong tag -->
+                        <!-- The number of likes -->
                         <strong class="text-secondary"> {{ recipes.number_of_likes }} </strong>
                     </div>
+                </div>
+                <div class="row">
                     <div class="col-3">
                         {% with comments.count as total_comments %}
                         <strong class="text-secondary"><i class="far fa-comments"></i>
-                            <!-- Our total_comments variable goes before the closing strong tag -->
+                            <!-- Our total_comments -->
                             {{ total_comments }}</strong>
                         {% endwith %}
                     </div>

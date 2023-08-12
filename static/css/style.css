@@ -28,6 +28,10 @@ body {
 
 /* Recipes details */
 
+.width-image {
+    width: 100%;
+}
+
 .masthead {
     margin-top: 10px;
     overflow: hidden;
