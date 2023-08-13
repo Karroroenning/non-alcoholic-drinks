@@ -281,7 +281,10 @@ Font: Lato
 ### Not logged in:
 
 ### Homepage
-I have manually tested every link on the homepage to ensure that it redirects to the appropriate url.
+I have manually tested every link on the homepage to ensure that it redirects to the appropriate url. 
+
+#### ATTENTION! I forgot to add contact us to the nav bar before doing my manual testing. But I added it after and have done a manual test on it and everything works as it should. So contact us may not be on all my print screens.
+
 <details><summary>- Navbar</summary>
 <img src="documentation/testing/Navbar_click_logout.png" >
 </details>
@@ -302,6 +305,9 @@ I have manually tested every link on the homepage to ensure that it redirects to
 <img src="documentation/testing/login_Page.png" >
 </details>
 
+<details><summary>- Contact us, I come to the contact us page.</summary>
+<img src="documentation/testing/contactus_page_empty.png" >
+</details>
 
 <details><summary>- Register, I come to the register</summary>
 <img src="documentation/testing/signup_Page.png" >
@@ -370,6 +376,18 @@ On the recipes page, we still have our navbar where all links work and a footer 
 <img src="documentation/testing/Recipes_details_next_side_click.png" >
 <img src="documentation/testing/Recipes_details.png" >
 </details>
+
+### Contact us page
+On the Contact us page, we still have our navbar where all links work and a footer that is the same as on the first page. On this page I can contact the site owner if I have any questions. I enter all the information and send it to the site owner.
+
+<details><summary>- Contact page there I write my name, email and my content. </summary>
+<img src="documentation/testing/contactus_page.png" >
+</details>
+
+<details><summary>- After I press send I get an alert message that says we will be in touch. </summary>
+<img src="documentation/testing/contactus_page_alert.png" >
+</details>
+
 
 ### Register page
 On the register page, we still have our navbar where all links work and a footer that is the same as on the first page. To register, you enter a username and password. Email is not a must. If you were to take a username that already exists, you will get an error message and even if the passwords do not match
