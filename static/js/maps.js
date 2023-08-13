@@ -1,24 +1,25 @@
-function initMap() {
-    var map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 3,
-        center: {
-            lat: 40.785091,
-            lng: -73.968285,
-        }
-    });
+// Initialize and add the map
+let map;
 
-    var labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+async function initMap() {
+  // The location of Nonalco4me
+  const position = { lat: 56.87573696215281, lng: 16.654649106896684 };
+  // Request needed libraries.
+  //@ts-ignore
+  const { Map } = await google.maps.importLibrary("maps");
+  const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
 
-var locations = [
-{ lat: 40.785091, lng: -73.968285 },
-];
+  // The map, centered at Borgholm
+  map = new Map(document.getElementById("map"), {
+    zoom: 6,
+    center: position,
+    mapId: "DEMO_MAP_ID",
+  });
 
-var markers = locations.map(function(location, i) {
-return new google.maps.Marker({
-    position: location,
-    label: labels[i % labels.length]
-});
-});
-
-var markerCluster = new MarkerClusterer(map, markers, { imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m' });
+  // The marker, positioned at Borgholm
+  const marker = new AdvancedMarkerElement({
+    map: map,
+    position: position,
+    title: "NonAlco4Me",
+  });
 }
