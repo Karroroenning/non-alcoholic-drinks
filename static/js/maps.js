@@ -4,8 +4,7 @@ let map;
 async function initMap() {
   // The location of Nonalco4me
   const position = { lat: 56.87573696215281, lng: 16.654649106896684 };
-  // Request needed libraries.
-  //@ts-ignore
+
   const { Map } = await google.maps.importLibrary("maps");
   const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
 

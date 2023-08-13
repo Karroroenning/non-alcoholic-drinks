@@ -39,11 +39,12 @@ Please view the live website here: [NonAlco4Me](https://non-alco-4me-427be0bd27b
   * [Read](#read)
   * [Update](#update)
   * [Delete](#delete)
-* [Future Features](#future-features)
 * [Manual Testing](#manual-testing)
-* [Automated Testing](#automated-testing)
-* [Validator Testing](#fixed-bugs)
+* [Admin Panel](#admin-panel)
+* [Validator Testing](#validator-testing)
+* [Defensive Validation](#defensive-validation)
 * [Accessibility](#accessibility)
+* [Fixed bugs](#fixed-bugs)
 * [Technologies Used](#technologies-used)
 * [Deployment](#deployment)
 * [Credits](#credits)
@@ -723,7 +724,10 @@ As a site admin I can remove users so that they will no longer be able to post u
 <img src="documentation/python-validator/recipes_views.png" >
 </details>
 
-
+#### Javascript file have been through the validator and have no issues.
+<details><summary>- maps.js</summary>
+<img src="documentation/javascript-validator/jshint.png" >
+</details>
 
 ## Defensive Validation
 
@@ -921,6 +925,7 @@ The live link for "NonAlco4Me" can be found [HERE](https://non-alco-4me-427be0bd
 - Code Institute (especially the Django blog) which helped me to understand how it all comes together.
 - Rebecca from tutor support helped me to understand my urls path and why it didn't worked.
 - Thanks to my mentor Martina for taking the time and giving me good inputs about my project. And sent very good suggestions for different repos that I could get inspiration from.
+- I struggled a lot with my google maps, but couldn't get it to work the way I wanted. So I searched on google and found a great youtube video that helped me. [How to add a map to your website with JavaScript](https://www.youtube.com/watch?v=B4p3A00uXAs&t=53s)
 - Have looked at [The paper lounge](https://github.com/cornishcoder1/the_paper_lounge) functions and received a lot of inspiration and a lot of understanding of how everything is connected.
 - I had a hard time getting started with my readme. So I've looked at three fantastic readme's that I've copied a bit from.
 - - [Humanitas](https://github.com/Sinha5714/humanitas_django_pp4/blob/main/README.md)
