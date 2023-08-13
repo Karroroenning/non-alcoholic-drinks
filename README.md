@@ -6,7 +6,7 @@ You can comment on recipes if you want to give feedback to the creator or if you
 
 NonAlco4Me has been built using the Django Framework in Python, HTML and CSS. It provides user authentication and full CRUD functionality.
 
-![]()(Am I Responsive image)
+![Am I Responsive image](/documentation/images/am_i_responsive.png)
 
 Please view the live website here: [NonAlco4Me](https://non-alco-4me-427be0bd27b2.herokuapp.com/ "NonAlco4Me Homepage").
 
@@ -868,8 +868,7 @@ NOTE: For initial deployment DISABLE_COLLECTSTATIC was also added
 
 ##### Add Buildpacks
 
-- Add python buildpack first
-- Add Nodejs buildpack after that
+- Add python buildpack
 
 <details>
 <summary>Buildpacks</summary>
@@ -907,7 +906,7 @@ NOTE: For initial deployment DISABLE_COLLECTSTATIC was also added
 
 <details>
     <summary> Deploy</summary>
-    <img src="documentation/heroku/view.png" alt="view screenshot">
+    <img src="documentation/deployment/deployment_view.png" alt="view screenshot">
 </details>
 
 The live link for "NonAlco4Me" can be found [HERE](https://non-alco-4me-427be0bd27b2.herokuapp.com/)
