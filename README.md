@@ -675,6 +675,55 @@ As a site admin I can remove users so that they will no longer be able to post u
 </details>
 
 #### Python files have been through the validator and have no issues.
+<details><summary>- contact_admin</summary>
+<img src="documentation/python-validator/contact_admin.png" >
+</details>
+<details><summary>- contact_admin</summary>
+<img src="documentation/python-validator/contact_apps.png" >
+</details>
+<details><summary>- contact_forms</summary>
+<img src="documentation/python-validator/contact_forms.png" >
+</details>
+<details><summary>- contact_models</summary>
+<img src="documentation/python-validator/contact_models.png" >
+</details>
+<details><summary>- contact_urls</summary>
+<img src="documentation/python-validator/contact_urls.png" >
+</details>
+<details><summary>- contact_views</summary>
+<img src="documentation/python-validator/contact_views.png" >
+</details>
+<details><summary>- home_apps</summary>
+<img src="documentation/python-validator/home_apps.png" >
+</details>
+<details><summary>- home_urls</summary>
+<img src="documentation/python-validator/home_urls.png" >
+</details>
+<details><summary>- home_views</summary>
+<img src="documentation/python-validator/home_views.png" >
+</details>
+<details><summary>- nonalco4me_urls</summary>
+<img src="documentation/python-validator/nonalco4me_urls.png" >
+</details>
+<details><summary>- nonalco4me_wsg</summary>
+<img src="documentation/python-validator/nonalco4me_wsgi.png" >
+</details>
+<details><summary>- nonalco4me_wsgi</summary>
+<img src="documentation/python-validator/recipes_admin.png" >
+</details>
+<details><summary>- recipes_forms</summary>
+<img src="documentation/python-validator/recipes_forms.png" >
+</details>
+<details><summary>- recipes_models</summary>
+<img src="documentation/python-validator/recipes_models.png" >
+</details>
+<details><summary>- recipes_urls</summary>
+<img src="documentation/python-validator/recipes_urls.png" >
+</details>
+<details><summary>- recipes_views</summary>
+<img src="documentation/python-validator/recipes_views.png" >
+</details>
+
 
 
 ## Defensive Validation

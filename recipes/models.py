@@ -7,8 +7,6 @@ from django.utils.text import slugify
 
 STATUS = ((0, "Draft"), (1, "Published"))
 
-# Recipes model in recipes detail
-
 
 class Recipes(models.Model):
 
@@ -56,8 +54,6 @@ class Recipes(models.Model):
             return True
         else:
             return False
-
-# The comment model in recipes detail
 
 
 class Comment(models.Model):
