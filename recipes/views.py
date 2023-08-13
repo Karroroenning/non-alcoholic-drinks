@@ -115,7 +115,8 @@ def edit_recipes(request, slug):
         "recipes": recipes
     }
     if request.method == "POST":
-        recipes_form = RecipesForm(request.POST, request.FILES, instance=recipes)
+        recipes_form = RecipesForm(request.POST, request.FILES,
+                                   instance=recipes)
         if recipes_form.is_valid():
             recipes = recipes_form.save(commit=False)
             recipes.creator = request.user

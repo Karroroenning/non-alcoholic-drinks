@@ -632,12 +632,56 @@ As a site admin I can remove users so that they will no longer be able to post u
 - I have checked the responsiveness on different window sizes.
 
 ## Validator Testing
-- HTML files pass through the W3C validator with no issues found.
-- CSS files pass through the Jigsaw validator with no issues found.
-- Python files have been through the validator and have no issues.
+#### HTML files pass through the W3C validator with no issues found.
+<details><summary>- Add recipes</summary>
+<img src="documentation/html-validations/html_validator_add_recipes.png" >
+</details>
+
+<details><summary>- Contact Us</summary>
+<img src="documentation/html-validations/html_validator_contact.png" >
+</details>
+
+<details><summary>- Edit</summary>
+<img src="documentation/html-validations/html_validator_edit.png" >
+</details>
+
+<details><summary>- Home</summary>
+<img src="documentation/html-validations/html_validator_home.png" >
+</details>
+
+<details><summary>- Login</summary>
+<img src="documentation/html-validations/html_validator_login.png" >
+</details>
+
+<details><summary>- Logout</summary>
+<img src="documentation/html-validations/html_validator_logout.png" >
+</details>
+
+<details><summary>- Recipes</summary>
+<img src="documentation/html-validations/html_validator_recipes.png" >
+</details>
+
+<details><summary>- Recipes detail</summary>
+<img src="documentation/html-validations/html_validator_recipes_detail.png" >
+</details>
+
+<details><summary>- Register</summary>
+<img src="documentation/html-validations/html_validator_register.png" >
+</details>
+
+#### CSS files pass through the Jigsaw validator with no issues found.
+<details><summary>- CSS</summary>
+<img src="documentation/css-validator/css_validator.png" >
+</details>
+
+#### Python files have been through the validator and have no issues.
+
 
 ## Defensive Validation
 
+<details><summary>- When I am not logged in and try to access a page in logged in mode.</summary>
+<img src="documentation/testing/login_Page.png" >
+</details>
 
 If a non-logged-in guest tries to access the add recipes, edit page, delete page, and contact page, they are prompted to log in. If at login they are identified as a logged in user, they are taken to the pages. Otherwise they are taken to the page screenshot above.
 
