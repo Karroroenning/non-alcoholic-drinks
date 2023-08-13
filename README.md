@@ -734,12 +734,41 @@ As a site admin I can remove users so that they will no longer be able to post u
 
 If a non-logged-in guest tries to access the add recipes, edit page, delete page, and contact page, they are prompted to log in. If at login they are identified as a logged in user, they are taken to the pages. Otherwise they are taken to the page screenshot above.
 
-
-## Fixed bugs
-
-
 ## Accessibility
 
+<details><summary>- Lighthouse</summary>
+<img src="documentation/lighthouse/lighthouse.png" >
+</details>
+
+## Fixed bugs
+- When I was clicking on a recipe to see details, I got an error that my recipes_detail.html does not exist. 
+- - <details><summary>I was missing the L in HTML.</summary>
+    <img src="documentation/bugs/missing_html.png" >
+    </details>
+<br>
+
+- I was trying to fix my comments. But when I was running a makemigration, I got (You are trying to add a non-nullable field 'email') I got different all the time. I also tried received 'name'. I couldn't have fixed it without Joshua's help on tutor support. Because I needed to restore my database.
+
+- I had a url path that didn't work when I pressed the add recipes button. So I got an error message. But it turned out that I had placed my url paths in the wrong order.
+- - <details><summary>- The button that didn't work.</summary>
+    <img src="documentation/bugs/the_button.png" >
+    </details>
+- - <details><summary>- Url path when it didn't work.</summary>
+    <img src="documentation/bugs/my_url.png" >
+    </details>
+- - <details><summary>- The Url path after, then the button worked.</summary>
+    <img src="documentation/bugs/tutor_urls.png" >
+    </details>
+
+- In my recipe detail, I wanted an edit and delete buttons. But I never got the buttons to appear. But that was because I had creator in my html file and author in my models.py.
+- - <details><summary>- The button that didn't work.</summary>
+    <img src="documentation/bugs/edit_button.png" >
+    </details>
+- - <details><summary>- Url path when it didn't work.</summary>
+    <img src="documentation/bugs/edit_button_creator.png" >
+    </details>
+
+- I didn't get my google maps to show up after I deployed to heroku. But my very kind classmate Starhigh helped me solve the problem. I would just add the secret key as a variable in configvars.
 
 ## Technologies Used
 ### Main Languages Used
