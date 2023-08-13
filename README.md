@@ -618,6 +618,12 @@ As a site admin I can remove users so that they will no longer be able to post u
 - CSS files pass through the Jigsaw validator with no issues found.
 - Python files have been through the validator and have no issues.
 
+## Defensive Validation
+
+
+If a non-logged-in guest tries to access the add recipes, edit page, delete page, and contact page, they are prompted to log in. If at login they are identified as a logged in user, they are taken to the pages. Otherwise they are taken to the page screenshot above.
+
+
 ## Fixed bugs
 
 
