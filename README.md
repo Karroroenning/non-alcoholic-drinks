@@ -20,8 +20,6 @@ Please view the live website here: [NonAlco4Me](https://non-alco-4me-427be0bd27b
   * [Admin](#as-a-admin)
 * [Design](#design)
   * [Wireframes](#wireframes)
-  * [Site Navigation](#site-navigation)
-  * [Database Schema](#database-schema)
   * [Color Scheme](#color-scheme)
   * [Typeography](#typography)
   * [Imagery](#imagery)
@@ -92,6 +90,13 @@ There should be lots of different options with flavors that suit you
 - As a site owner I can remove users so that they will no longer be able to post unsuitable content.
 - As a site owner I can add recipes from the admin panel so that if users do not add any recipes.
 
+## Agile Methodology
+
+The development of this project was managed and implemented using GitHub Projects Kanban Board. Available here:
+<a href="https://github.com/users/Karroroenning/projects/6" target="_blank" rel="noopener" aria-label="Link to GitHub Projects">NonAlco4Me - User Stories</a>
+
+<br>
+
 ## Design
 ### Wireframes
 
@@ -131,12 +136,6 @@ There should be lots of different options with flavors that suit you
 <img src="documentation/wireframe/logout.png" >
 </details>
 
-
-### Site Navigation
-![]()
-
-### Database Schema
-![]()
 
 ### Color Scheme
 <img src="documentation/images/nonalco4me.png" >
@@ -759,6 +758,7 @@ If a non-logged-in guest tries to access the add recipes, edit page, delete page
 - - <details><summary>- The Url path after, then the button worked.</summary>
     <img src="documentation/bugs/tutor_urls.png" >
     </details>
+<br>
 
 - In my recipe detail, I wanted an edit and delete buttons. But I never got the buttons to appear. But that was because I had creator in my html file and author in my models.py.
 - - <details><summary>- The button that didn't work.</summary>
@@ -767,6 +767,7 @@ If a non-logged-in guest tries to access the add recipes, edit page, delete page
 - - <details><summary>- Url path when it didn't work.</summary>
     <img src="documentation/bugs/edit_button_creator.png" >
     </details>
+<br>
 
 - I didn't get my google maps to show up after I deployed to heroku. But my very kind classmate Starhigh helped me solve the problem. I would just add the secret key as a variable in configvars.
 
@@ -788,47 +789,145 @@ If a non-logged-in guest tries to access the add recipes, edit page, delete page
 - Favicon - to provide the code & image for the icon in the tab bar.
 - Django
 - Bootstrap
-- DrawSQL
 
-### Installed Packages:
-- 'django<4' gunicorn
-- dj_database_url psycopg2
-- dj3-cloudinary-storage
-- django-summernote (link)
-- django-allauth (link)
-- django-crispy-forms(link)
+### Modules used for the development of this project:
+<details><summary>- Requirements.</summary>
+    <img src="documentation/images/requirements.png" >
+    </details>
 
 ## Deployment
-The site was deployed to Heroku. The steps to deploy are as follows:
 
-- Install Django & Gunicorn: pip3 install 'django<4' gunicorn
-- Install Django database & psycopg: pip3 install dj_database_url psycopg2
-- Install Cloudinary: pip3 install dj3-cloudinary-storage
-- Creating the requirements.txt file with the following command: pip3 freeze --local > requirements.txt
-- A django project was created using: django-admin startproject printstatements 
-- The Hillbox app was then created with: python3 manage.py startapp blog
-- Which was then added to the settings.py file within our project directory
-- The changes were then migrated using: python3 manage.py migrate.
-- Navigated to Heroku & created a new app called print-statements.
-- Added the Heroku Postgres database to the Resources tab.
-- Navigated to the Settings Tab, to add the following key/value pairs to the configvars:
-key: SECRET_KEY | value: randomkey
-key: PORT | value: 8000
-key: CLOUDINARY_URL | value: API environment variable
-key: DATABASE_URL | value: value supplied by Heroku
-- Added the DATABASE_URL, SECRET_KEY & CLOUDINARY_URL to the env.py file 
-- Added the DATABASE_URL, SECRET_KEY & CLOUDINARY_URL to the settings.py file
-- Add an import os statement for the env.py file.
-- Added Heroku to the ALLOWED_HOSTS in settings.py
-- Created the Procfile
-- Pushed the project to Github
-- Connected my github account to Heroku through the Deploy tab
-- Connected my github project repository, and then clicked on the "Deploy" button
+### Creating Database using ElephantSQL
+
+1. To generate a managed PostgreSQL database, please proceed to [ElephantSQL](https://customer.elephantsql.com/) and either sign up or sign in to your account. Once you've logged in, click on the 'Create New Instance' button.
+- - <details><summary>See Image</summary>
+    <img src="documentation/deployment/elephantSQL.png" >
+    </details>
+
+2. Name your database and select the 'Tiny Turtle' payment plan. Then, click on 'Select Region'
+
+3. Select your preferred region and create the database instance.
+
+4.  After creating the instance, navigate to the instances page and click on the name of the database you selected earlier. Then, in the details section on the following page, copy the PostgreSQL URL.
+
+- - <details><summary>See Image</summary>
+    <img src="documentation/deployment/elephantSQL_url.png" >
+    </details>
+
+### Deploying the website in Heroko
+
+#### Before deploying in Heroku following files were created:
+
+1. env.py : stores confidential data eg. API keys, passwords etc.
+- - <details><summary>See Image</summary>
+    <img src="documentation/deployment/env.py.png" >
+    </details>
+
+2. Procfile : Very important for deployment and must be added with capital P
+- - <details><summary>See Image</summary>
+    <img src="documentation/deployment/procfile.png" >
+    </details>
+
+3. Requirements.txt: This must be updated for deployment in Heroku. It stores data of libraries used for project
+- - <details><summary>See Image</summary>
+    <img src="documentation/deployment/requirements.png" >
+    </details>
+
+- The website was deployed to Heroko using following steps:
+
+#### Login or create an account at Heroku
+
+- Make an account in Heroko and login
+
+#### Creating an app
+
+- Create new app in the top right of the screen and add an app name.
+- Select region
+- Then click "create app".
+
+<details>
+<summary>Create App</summary>
+<img src="documentation/deployment/app_name.png" alt="Heroko create app screenshot">
+</details>
+
+#### Open settings Tab
+
+##### Click on config var
+
+- Store CLOUDINARY_URL file from in key and add the values
+- Store DATABASE_URL file from in key and add the values
+- Store SECRET_KEY file from in key and add the values
+- Store PORT in key and value
+
+NOTE: For initial deployment DISABLE_COLLECTSTATIC was also added
+
+<details>
+<summary>Config var</summary>
+<img src="documentation/deployment/configvars.png" alt="Config var screenshot">
+</details>
+
+##### Add Buildpacks
+
+- Add python buildpack first
+- Add Nodejs buildpack after that
+
+<details>
+<summary>Buildpacks</summary>
+<img src="documentation/deployment/buildpacks.png" alt="Buildpacks screenshot">
+</details>
+
+#### Open Deploy Tab
+
+##### Choose deployment method and Connect to Github
+
+- Connect GITHUB
+- Login if prompted
+- Choose repositories you want to connect
+- Click "Connect"
+
+<details>
+<summary>Deployment method</summary>
+<img src="documentation/deployment/github_connect.png" alt="Github connect">
+</details>
+
+##### Automatic and Manual deploy
+
+- Choose a method to deploy
+- After Deploy is clicked it will install various file
+
+<details>
+<summary> Deploy methods</summary>
+<img src="documentation/deployment/deploy.png" alt="deploy method screenshot">
+</details>
+
+##### Final Deployment
+
+- A view button will display
+- Once clicked the website will open
+
+<details>
+    <summary> Deploy</summary>
+    <img src="documentation/heroku/view.png" alt="view screenshot">
+</details>
 
 The live link for "NonAlco4Me" can be found [HERE](https://non-alco-4me-427be0bd27b2.herokuapp.com/)
 
 ## Credits
-### Content
 
+### Content
+- I have received very good help from Think Therefore I Blog from code institute which got me started on my project.
+- Checked out [Django Blog Webinar](https://youtu.be/YH--VobIA8c) which helped me understand more about edit and delete buttons.
+- Big shoutout to my classmate [Starhigh](https://github.com/gStarhigh) who sat for 4 hours trying to help me get my commenting feature up and running. Unfortunately I needed to restore my database. Which we didn't think of.
+- A thank you to Joshua from tutor support who helped me reset my database. When I couldn't makemigrate.
+- Code Institute (especially the Django blog) which helped me to understand how it all comes together.
+- Rebecca from tutor support helped me to understand my urls path and why it didn't worked.
+- Thanks to my mentor Martina for taking the time and giving me good inputs about my project. And sent very good suggestions for different repos that I could get inspiration from.
+- Have looked at [The paper lounge](https://github.com/cornishcoder1/the_paper_lounge) functions and received a lot of inspiration and a lot of understanding of how everything is connected.
+- I had a hard time getting started with my readme. So I've looked at three fantastic readme's that I've copied a bit from.
+- - [Humanitas](https://github.com/Sinha5714/humanitas_django_pp4/blob/main/README.md)
+- - [Hillbox](https://github.com/736B796E6574/CI-PP4/blob/main/README.md)
+- - [The paper lounge](https://github.com/cornishcoder1/the_paper_lounge/blob/main/README.md)
 
 ## Images
+
+- The images on the homepage including recipes images are taken from [pexels.com](https://www.pexels.com/)
