@@ -724,7 +724,8 @@ As a site admin I can remove users so that they will no longer be able to post u
 <img src="documentation/python-validator/recipes_views.png" >
 </details>
 
-#### Javascript file have been through the validator and have no issues.
+#### Javascript file have been through the validator and it takes no arguments.
+The function works without problems and I see that I have undefined variable and unused variables. I tried to fix a google maps from Code institute lessons. But did not go through JsHint. So the code I have now is from Google's own tutorial. Tried to fix the code so I didn't need what is circled in the picture, but unfortunately didn't succeed.
 <details><summary>- maps.js</summary>
 <img src="documentation/javascript-validator/jshint.png" >
 </details>
