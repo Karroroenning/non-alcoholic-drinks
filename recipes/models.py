@@ -42,14 +42,14 @@ class Recipes(models.Model):
         return self.comments.count()
 
     def can_edit(self, request, slug):
-        """Allows creator to edit review."""
+        """Allows creator to edit recipes."""
         if self.author:
             return True
         else:
             return False
 
     def can_delete(self, request, slug):
-        """Allows creator to delete review."""
+        """Allows creator to delete recipes."""
         if self.author:
             return True
         else:

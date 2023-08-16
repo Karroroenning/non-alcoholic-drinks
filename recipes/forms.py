@@ -10,7 +10,7 @@ class CommentForm(forms.ModelForm):
 
 class RecipesForm(forms.ModelForm):
     """Recipes form"""
-    # Sets a required field on a Django model form (README code reference no.2)
+    # Sets a required field on a Django model form.
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields['title'].required = True
