@@ -68,6 +68,7 @@ There should be lots of different options with flavors that suit you
 - The user should have the option of having their own account page where they can save their favorite recipes from the website in a kind of "recipe book".
 - Being able to search by flavor in a search box.
 - Delete and edit their own comments.
+- You should be able to access adding recipes through the navbar.
 <details><summary>Now it is possible to select any user when adding a recipe. So in the future I will change it to default to whoever is logged in.</summary>
 <img src="documentation/images/recipes_author.png" >
 </details>
