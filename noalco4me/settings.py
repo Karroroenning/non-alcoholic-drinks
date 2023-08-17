@@ -33,7 +33,7 @@ GOOGLE_SECRET = os.environ.get("GOOGLE_MAPS_API_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 ALLOWED_HOSTS = ['non-alco-4me-427be0bd27b2.herokuapp.com',
-                 '8000-karroroenni-nonalcoholi-ak9fqj8cuwe.ws-eu103.gitpod.io']
+                 '8000-karroroenni-nonalcoholi-ak9fqj8cuwe.ws-eu104.gitpod.io']
 
 
 # Application definition

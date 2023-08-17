@@ -22,5 +22,3 @@ async function initMap() {
     title: "NonAlco4Me",
   });
 }
-
-initMap();

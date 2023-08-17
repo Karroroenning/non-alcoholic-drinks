@@ -3,14 +3,6 @@
 {% load crispy_forms_tags %}
 {% load static %}
 
-{% if user.is_authenticated %}
-{% if submitted in add_recipes %}
-            <div class="alert alert-success" role="alert">
-                Your recipes is awaiting approval
-            </div>
-{% endif %}
-{% endif %}
-
 {% block title %}
     <title>Create your recipes here</title>
 {% endblock %}
